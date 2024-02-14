@@ -1,0 +1,1062 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+:root{
+   --main-color:#DA2C32;
+   --light-color:#666;
+   --light-bg:#eee;
+   --white:#fff;
+   --black:#303030;
+   --border:.1rem solid var(--light-color);
+   --box-shodow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Montserrat', sans-serif;
+   margin: 0; padding: 0;
+   box-sizing: border-box;
+   outline: none; border: none;
+   text-decoration: none;
+}
+
+*::selection{
+   background-color: var(--main-color);
+   color: var(--white);
+}
+
+*::-webkit-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color: var(--main-color);
+   border-radius: 5rem;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 10rem;
+}
+
+body{
+   background-color: var(--light-bg);
+}
+
+section{
+   padding: 3rem 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.heading{
+   text-align: center;
+   padding-bottom: 2.5rem;
+   font-size: 3rem;
+   color: var(--black);
+   text-transform: capitalize;
+}
+
+.btn,
+.inline-btn{
+   margin-top: 1rem;
+   padding: 1rem 3rem;
+   background-color: var(--main-color);
+   color: var(--white);
+   cursor: pointer;
+   text-align: center;
+   font-size: 1.8rem;
+   text-transform: capitalize;
+}
+
+.btn:hover,
+.inline-btn:hover{
+   background-color: var(--black);
+}
+
+.btn{
+   display: block;
+   width: 100%;
+}
+
+.inline-btn{
+   display: inline-block;
+}
+
+.header{
+   position: sticky;
+   top: 0; left: 0; right: 0;
+   z-index: 1000;
+   box-shadow: var(--box-shodow);
+}
+.header .navbar.nav-1 .flex{
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+}
+.header .navbar.nav-2 .flex{
+   padding-top: 0;
+   padding-bottom: 0;
+}
+.header .navbar.nav-1{
+   background-color: var(--black);
+}
+.header .navbar.nav-2{
+   background-color: var(--white);
+}
+.header .navbar .flex{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.header .navbar .flex .logo{
+   font-size: 2.2rem;
+   color: var(--white); 
+}
+.header .navbar .flex .logo i{
+   color: var(--main-color);
+   margin-right: 1rem;
+}
+.header .navbar .flex ul{
+   list-style: none;
+}
+.header .navbar .flex ul li{
+   float: left;
+   position: relative;
+}
+.header .navbar .flex ul li a{
+   display: inline-block;
+   padding: 1.2rem 2rem;
+   font-size: 1.8rem;
+   color: var(--black);
+   background-color: var(--white);
+}
+.header .navbar .flex ul li a:hover{
+   background-color: var(--main-color);
+   color: var(--white);
+}
+.header .navbar .flex ul li a i{
+   margin-left: 1rem;
+}
+.header .navbar .flex ul li ul{
+   position: absolute;
+   width: 17rem;
+   left: 0;
+}
+.header .navbar .flex ul li ul li{
+   width: 100%;
+}
+.header .navbar .flex ul li ul li a{
+   display: none;
+}
+.header .navbar .flex ul li:hover ul li a{
+   display: block;
+}
+#menu-btn{
+   font-size: 2.5rem;
+   color: var(--black);
+   display: none;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Add this CSS to your stylesheet or in a <style> tag in your HTML */
+
+/* Style for the search container */
+ul .search-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the search input */
+ul .search-container input[type="text"] {
+  padding: 0.5rem;
+  margin-right: 0.3125rem; /* Adjust as needed */
+  border: 0.0625rem solid #ccc; /* Adjust as needed */
+  border-radius: 0.25rem; /* Adjust as needed */
+}
+
+/* Style for the search button */
+ul .search-container button {
+  padding: 0.5rem 0.9375rem; /* Adjust as needed */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0.25rem; /* Adjust as needed */
+  cursor: pointer;
+}
+
+/* Style for the "Apply Services" button */
+ul .search-container button:nth-of-type(2) {
+  margin-left: 0.625rem; /* Adjust as needed */
+  background-color: #008CBA;
+}
+
+
+/* common css styles */
+.form-group {
+    margin-bottom: 2rem; /* 20px */
+}
+
+.form-label {
+    display: block;
+    font-size: 1.6rem; /* 16px */
+    margin-bottom: 0.5rem; /* 5px */
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem; /* 10px */
+    font-size: 1.6rem; /* 16px */
+    border: 0.1rem solid #ccc; /* 1px */
+    border-radius: 0.4rem; /* 4px */
+}
+
+.form-check-input {
+    margin-right: 0.5rem; /* 5px */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem 2rem; /* 10px 20px */
+    font-size: 1.8rem; /* 18px */
+    border: none;
+    border-radius: 0.4rem; /* 4px */
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+/* ends here */
+
+
+
+/* Styles for the Admin Dashboard section */
+.admin-dashboard {
+    margin-top: 3rem;
+}
+
+.admin-dashboard h1 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.tools {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.tools > div {
+    flex: 1;
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shodow);
+}
+
+.user-management,
+.service-requests,
+.listings-management {
+    text-align: center;
+}
+
+.user-management h2,
+.service-requests h2,
+.listings-management h2 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.user-management p,
+.service-requests p,
+.listings-management p {
+    margin-bottom: 0.5rem;
+    /* Add additional styling as needed */
+}
+
+/* Styles for the Equipment Listings Marketplace section */
+.equipment-listings-marketplace {
+    margin-top: 3rem;
+}
+
+.equipment-listings-marketplace h1 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.equipment-listing {
+    background-color: var(--white);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shodow);
+}
+
+.equipment-listing h2 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.equipment-listing p {
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.inquire-btn {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.inquire-btn:hover {
+    background-color: #a0242e; /* Darker shade for hover effect */
+}
+
+
+/* Styles for the Feedback Form section */
+.feedback-form {
+    margin-top: 3rem;
+}
+
+.feedback-form h1 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.feedback-form {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shodow);
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--main-color);
+}
+
+.feedback-form input[type="number"],
+.feedback-form textarea,
+.feedback-form input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--light-color);
+    border-radius: 0.3rem;
+}
+
+.feedback-form button {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.feedback-form button:hover {
+    background-color: #a0242e; /* Darker shade for hover effect */
+}
+
+/* ends */
+
+
+/* Styles for the Feedback Success section */
+.feedback-success {
+    margin-top: 3rem;
+    background-color: #f1f1f1; /* Change this to your desired background color */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shodow);
+    text-align: center;
+}
+
+.feedback-success h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.feedback-success p {
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+/* ends */
+
+
+/* Styles for the Home page section */
+.home {
+    margin-top: 3rem;
+    background-color: #e6f7ff; /* Change this to your desired background color */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shodow);
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.home p {
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+/* ends */
+
+
+/* Styles for the Login section */
+.login {
+    margin-top: 3rem;
+    background-color: #f9f9f9; /* Change this to your desired background color */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shodow);
+    text-align: center;
+}
+
+.login h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login label {
+    font-size: 1rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.login input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--light-color);
+    border-radius: 0.3rem;
+}
+
+.login button {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login button:hover {
+    background-color: #a0242e; /* Darker shade for hover effect */
+}
+
+/* ends */
+
+
+/* Styles for the Logout section */
+.logout {
+    margin-top: 3rem;
+    background-color: #f9f9f9; /* Change this to your desired background color */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shodow);
+    text-align: center;
+}
+
+.logout h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.logout p {
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.logout form {
+    display: flex;
+    justify-content: center;
+}
+
+.logout button {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.logout button:hover {
+    background-color: #a0242e; /* Darker shade for hover effect */
+}
+
+/* ends */
+
+
+
+/* Styles for the Messaging Interface section */
+.messaging-interface {
+    margin-top: 3rem;
+}
+
+.messaging-interface h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.inbox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.message {
+    background-color: #f9f9f9; /* Change this to your desired background color */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shodow);
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.sender {
+    font-weight: bold;
+}
+
+.timestamp {
+    color: var(--light-color);
+}
+
+.reply-btn {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.reply-btn:hover {
+    background-color: #a0242e; /* Darker shade for hover effect */
+}
+
+.compose {
+    margin-top: 2rem;
+}
+
+.compose h2 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+#messageForm {
+    background-color: #f9f9f9; /* Change this to your desired background color */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shodow);
+}
+
+#messageForm label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--main-color);
+}
+
+#messageForm input,
+#messageForm textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--light-color);
+    border-radius: 0.3rem;
+}
+
+.send-btn {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.send-btn:hover {
+    background-color: #a0242e; /* Darker shade for hover effect */
+}
+
+/* end */
+
+
+/* Styles for the Notifications Center section */
+.notifications-center {
+    margin-top: 3rem;
+}
+
+.notifications-center h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.notifications-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.notification-item {
+    background-color: #f9f9f9; /* Change this to your desired background color */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shodow);
+}
+
+.timestamp {
+    color: var(--light-color);
+    font-size: 0.9rem;
+}
+
+.notification-item p {
+    margin-top: 0.5rem;
+    color: var(--black);
+}
+
+.clear-notifications-btn {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.clear-notifications-btn:hover {
+    background-color: #a0242e; /* Darker shade for hover effect */
+}
+
+/* end */
+
+/* Additional styles for registration-success section */
+.registration-success {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.registration-success h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.registration-success p {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+/* end */
+
+/* Additional styles for service-request-form section */
+.service-request-form {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.service-request-form h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.service-request-form form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.service-request-form label {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.service-request-form input,
+.service-request-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    border: var(--border);
+}
+
+.service-request-form button {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* end */
+
+/* Additional styles for service-request-success section */
+.service-request-success {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.service-request-success h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.service-request-success p {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+/* ends */
+
+/* Additional styles for services-marketplace section */
+.services-marketplace {
+    margin-top: 3rem;
+}
+
+.services-marketplace h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.service-listing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.service-item {
+    border: var(--border);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shodow);
+    background-color: var(--white);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item h2 {
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+.select-service-btn {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.select-service-btn:hover {
+    background-color: darken(var(--main-color), 10%);
+}
+
+/* ends */
+/* Additional styles for suggestions section */
+.suggestions {
+    margin-top: 3rem;
+}
+
+.suggestions h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.suggestion-list {
+    margin-bottom: 2rem;
+}
+
+.suggestion {
+    border: var(--border);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shodow);
+    background-color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.suggestion p {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.suggestion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suggestion-header .user {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.suggestion-header .timestamp {
+    font-size: 1rem;
+    color: var(--light-color);
+}
+
+.compose-suggestion h2 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+#suggestion-content {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+}
+
+.submit-suggestion-btn {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submit-suggestion-btn:hover {
+    background-color: darken(var(--main-color), 10%);
+}
+
+/* ends */
+
+/* Additional styles for user-profile section */
+.user-profile {
+    margin-top: 3rem;
+}
+
+.user-profile h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.profile-details {
+    border: var(--border);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shodow);
+    background-color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.profile-details h2 {
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+.profile-details p {
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+#editProfileForm {
+    display: none;
+}
+
+#editProfileForm label {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+#editProfileForm input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+}
+
+#editProfileForm button {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#editProfileForm button:hover {
+    background-color: darken(var(--main-color), 10%);
+}
+
+/* ends */
+/* Additional styles for user-registration section */
+.user-registration {
+    margin-top: 3rem;
+}
+
+.user-registration h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.user-registration form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.user-registration label {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.user-registration input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+}
+
+.user-registration button {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.user-registration button:hover {
+    background-color: darken(var(--main-color), 10%);
+}
+
+/* ends */
+
+
+/* media queries */
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .main-header {
+        position: static;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar-toggler-icon {
+        background-color: var(--black);
+    }
+
+    /* Add more adjustments as needed */
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header .navbar .flex .logo {
+        font-size: 1.8rem;
+    }
+
+    .home .center form .flex {
+        gap: 0;
+    }
+
+    .listings .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Add more adjustments as needed */
+}
+

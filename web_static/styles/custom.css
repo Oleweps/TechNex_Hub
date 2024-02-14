@@ -1,0 +1,1645 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+:root{
+   --main-color:#DA2C32;
+   --light-color:#666;
+   --light-bg:#eee;
+   --white:#fff;
+   --black:#303030;
+   --border:.1rem solid var(--light-color);
+   --box-shodow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Montserrat', sans-serif;
+   margin: 0; padding: 0;
+   box-sizing: border-box;
+   outline: none; border: none;
+   text-decoration: none;
+}
+
+*::selection{
+   background-color: var(--main-color);
+   color: var(--white);
+}
+
+*::-webkit-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color: var(--main-color);
+   border-radius: 5rem;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 10rem;
+}
+
+body{
+   background-color: var(--light-bg);
+}
+
+section{
+   padding: 3rem 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.heading{
+   text-align: center;
+   padding-bottom: 2.5rem;
+   font-size: 3rem;
+   color: var(--black);
+   text-transform: capitalize;
+}
+
+.btn,
+.inline-btn{
+   margin-top: 1rem;
+   padding: 1rem 3rem;
+   background-color: var(--main-color);
+   color: var(--white);
+   cursor: pointer;
+   text-align: center;
+   font-size: 1.8rem;
+   text-transform: capitalize;
+}
+
+.btn:hover,
+.inline-btn:hover{
+   background-color: var(--black);
+}
+
+.btn{
+   display: block;
+   width: 100%;
+}
+
+.inline-btn{
+   display: inline-block;
+}
+
+.header{
+   position: sticky;
+   top: 0; left: 0; right: 0;
+   z-index: 1000;
+   box-shadow: var(--box-shodow);
+}
+.header .navbar.nav-1 .flex{
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+}
+.header .navbar.nav-2 .flex{
+   padding-top: 0;
+   padding-bottom: 0;
+}
+.header .navbar.nav-1{
+   background-color: var(--black);
+}
+.header .navbar.nav-2{
+   background-color: var(--white);
+}
+.header .navbar .flex{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.header .navbar .flex .logo{
+   font-size: 2.2rem;
+   color: var(--white); 
+}
+.header .navbar .flex .logo i{
+   color: var(--main-color);
+   margin-right: 1rem;
+}
+.header .navbar .flex ul{
+   list-style: none;
+}
+.header .navbar .flex ul li{
+   float: left;
+   position: relative;
+}
+.header .navbar .flex ul li a{
+   display: inline-block;
+   padding: 1.2rem 2rem;
+   font-size: 1.8rem;
+   color: var(--black);
+   background-color: var(--white);
+}
+.header .navbar .flex ul li a:hover{
+   background-color: var(--main-color);
+   color: var(--white);
+}
+.header .navbar .flex ul li a i{
+   margin-left: 1rem;
+}
+.header .navbar .flex ul li ul{
+   position: absolute;
+   width: 17rem;
+   left: 0;
+}
+.header .navbar .flex ul li ul li{
+   width: 100%;
+}
+.header .navbar .flex ul li ul li a{
+   display: none;
+}
+.header .navbar .flex ul li:hover ul li a{
+   display: block;
+}
+#menu-btn{
+   font-size: 2.5rem;
+   color: var(--black);
+   display: none;
+}
+
+/* Add this to your CSS file */
+
+/*style footer section*/
+footer {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   background-color: #222;
+   color: #fff;
+}
+/*target each content section under footer*/
+footer .col {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-bottom: 20px;
+}
+/*target each content text in each footer section column*/
+footer .logo {
+   margin-bottom: 30px;
+}
+footer h4 {
+   font-size: 14px;
+   padding-bottom: 20px;
+}
+footer p {
+   font-size: 13px;
+   margin: 0 0 8px 0;
+}
+footer a {
+   font-size: 13px;
+   text-decoration: none;
+   color: #222;
+   margin-bottom: 10px;
+   color: #fff;
+}
+footer .follow {
+   margin-top: 20px;
+}
+footer .follow i {
+   color: #008CBA;
+   padding-right: 4px;
+   cursor: pointer;
+}
+
+footer .follow i:hover,
+footer a:hover {
+   color: #088178;
+}
+footer .copyright {
+   width: 100%;
+   text-align: center;
+}
+
+
+/* Add this CSS to your stylesheet or in a <style> tag in your HTML */
+
+/* Style for the search container */
+ul .search-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the search input */
+ul .search-container input[type="text"] {
+  padding: 0.5rem;
+  margin-right: 0.3125rem; /* Adjust as needed */
+  border: 0.0625rem solid #ccc; /* Adjust as needed */
+  border-radius: 0.25rem; /* Adjust as needed */
+}
+
+/* Style for the search button */
+ul .search-container button {
+  padding: 0.5rem 0.9375rem; /* Adjust as needed */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0.25rem; /* Adjust as needed */
+  cursor: pointer;
+}
+
+/* Style for the "Apply Services" button */
+ul .search-container button:nth-of-type(2) {
+  margin-left: 0.625rem; /* Adjust as needed */
+  background-color: #008CBA;
+}
+
+/* Custom styles for the home section */
+.head {
+   position: relative;
+   z-index: 1;
+}
+
+.home {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   text-align: center;
+   padding: 10vh 2rem;
+   background: url('/images/technology-tag.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 100vh;
+}
+
+.home h1 {
+   font-size: 4rem;
+   margin-bottom: 1.5rem;
+   font-weight: bold;
+}
+
+.home p {
+   font-size: 2rem;
+   margin-bottom: 2rem;
+}
+
+.explore-btn {
+   margin-top: 2rem;
+   padding: 1.5rem 3rem;
+   background-color: #DA2C32;
+   color: #fff;
+   cursor: pointer;
+   font-size: 1.8rem;
+   text-transform: capitalize;
+   border: none;
+}
+
+.explore-btn:hover {
+   background-color: #303030;
+}
+
+
+
+/* Apply common CSS styles and rem values here */
+
+/* Apply common CSS styles and rem values here */
+
+/* Styles for the user registration section */
+.user-registration {
+   text-align: center;
+}
+
+.user-registration .grid-container {
+   display: flex;
+   gap: 2rem; /* Adjust gap as needed */
+   justify-content: center;
+   margin-top: 2rem; /* Adjust margin as needed */
+}
+
+.user-registration .grid-container > div {
+   background-color: var(--white);
+   box-shadow: var(--box-shodow);
+   padding: 2rem;
+   text-align: center;
+   flex: 1; /* Consume equal horizontal space */
+}
+
+.user-registration .intro-content h1 {
+   font-size: 3rem;
+   margin-bottom: 1.5rem;
+   font-weight: bold;
+   color: var(--black);
+}
+
+.user-registration .intro-content p {
+   line-height: 1.8;
+   font-size: 1.6rem;
+   color: var(--light-color);
+   margin-bottom: 1.5rem; /* Adjust margin as needed */
+}
+
+.user-registration .intro-content button {
+   font-size: 1.8rem;
+   padding: 1rem 2rem;
+   background-color: var(--main-color);
+   color: var(--white);
+   border: none;
+   border-radius: 0.313rem; /* Equivalent to 5px */
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.user-registration .intro-content button:hover {
+   background-color: var(--black);
+}
+
+.user-registration .image-container img {
+   margin: 1rem 0;
+   width: 100%;
+   border-radius: 1rem; /* Equivalent to 10px */
+}
+
+
+
+
+/* Styles for the user registration form (hidden by default) */
+.user-registration form {
+   display: none;
+   max-width: 25rem; /* Equivalent to 400px */
+   width: 100%;
+   text-align: center;
+   background-color: var(--white); /* Assuming you have a --white variable */
+   border-radius: 1rem; /* Equivalent to 10px */
+   padding: 2rem;
+   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1); /* Equivalent to 20px */
+}
+
+.user-registration form h2 {
+   font-size: 2.5rem;
+   margin-bottom: 1.5rem;
+   color: var(--black); /* Assuming you have a --black variable */
+}
+
+.user-registration form label {
+   display: block;
+   margin-bottom: 0.5rem;
+   font-size: 1.8rem;
+   color: var(--light-color); /* Assuming you have a --light-color variable */
+}
+
+.user-registration form input {
+   width: 100%;
+   padding: 0.8rem;
+   margin-bottom: 1rem;
+   font-size: 1.6rem;
+   border: 0.1rem solid var(--light-color); /* Assuming you have a --light-color variable */
+   border-radius: 0.313rem; /* Equivalent to 5px */
+}
+
+.user-registration form button {
+   width: 100%;
+   padding: 1rem;
+   background-color: var(--main-color); /* Assuming you have a --main-color variable */
+   color: var(--white); /* Assuming you have a --white variable */
+   font-size: 1.8rem;
+   border: none;
+   border-radius: 0.313rem; /* Equivalent to 5px */
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.user-registration form button:hover {
+   background-color: var(--black); /* Assuming you have a --black variable */
+}
+
+/* Styles for the admin dashboard section */
+.admin-dashboard {
+   text-align: center;
+}
+
+.admin-dashboard h1 {
+   font-size: 3rem;
+   margin-bottom: 1.5rem;
+   font-weight: bold;
+   color: var(--black);
+}
+
+.admin-dashboard .tools {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap: 2rem;
+   justify-content: center;
+   margin-top: 2rem; /* Adjust margin as needed */
+}
+
+.admin-dashboard .tools > div {
+   background-color: var(--white);
+   box-shadow: var(--box-shodow);
+   padding: 2rem;
+   text-align: center;
+}
+
+.admin-dashboard .tools h2 {
+   font-size: 2.5rem;
+   padding: 1rem 0;
+   color: var(--black);
+   text-transform: capitalize;
+}
+
+.admin-dashboard .tools p {
+   line-height: 1.8;
+   font-size: 1.6rem;
+   color: var(--light-color);
+   margin-bottom: 1.5rem; /* Adjust margin as needed */
+}
+
+.admin-dashboard .tools img {
+   margin: 1rem 0;
+   height: 8rem;
+}
+/* end of admin stylying */
+
+
+/* Styles for the user profile section */
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 2rem; /* Adjust padding as needed */
+}
+
+.profile-picture {
+    border-radius: 50%; /* Add border radius for a circular profile picture */
+    overflow: hidden; /* Ensure the border-radius is applied correctly */
+    margin-bottom: 1.5rem;
+}
+
+.profile-picture img {
+    width: 9rem; /* Set the width of the profile picture */
+    height: 9rem; /* Set the height of the profile picture */
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+.profile-details {
+    max-width: 25rem; /* Set max-width in rem */
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.user-management {
+    margin-top: 2rem;
+}
+
+.user-management h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.user-management ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-management li {
+    margin-bottom: 0.5rem;
+}
+
+.user-management a {
+    text-decoration: none;
+    color: var(--main-color); /* Use the main color variable for links */
+    font-weight: bold;
+}
+
+.user-management a:hover {
+    color: var(--black); /* Change color on hover */
+}
+
+#editProfileBtn {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+#editProfileBtn:hover {
+    background-color: var(--black);
+}
+/* end of user profile details */
+
+/* Custom CSS for the Contact Description Section */
+
+/* Contact Header */
+#page-header {
+   background-color: #1c1c1c;
+   color: #fff;
+   padding: 2rem;
+   text-align: center;
+}
+
+#page-header h2 {
+   font-size: 1.5rem;
+   color: #e44d26;
+}
+
+#page-header p {
+   font-size: 1rem;
+   color: #ccc;
+}
+
+/* Contact Details Section */
+#contact-details {
+   display: flex;
+   justify-content: space-between;
+   padding: 2rem;
+}
+
+#contact-details .details {
+   max-width: 45%;
+}
+
+#contact-details h2 {
+   font-size: 1.875rem;
+   color: #333;
+}
+
+#contact-details h3 {
+   font-size: 1.5rem;
+   color: #666;
+}
+
+#contact-details div li {
+   list-style: none;
+   display: flex;
+   align-items: center;
+   margin-bottom: 1rem;
+}
+
+#contact-details div li i {
+   font-size: 1.25rem;
+   margin-right: 0.5rem;
+   color: #e44d26;
+}
+
+#contact-details .map {
+   max-width: 45%;
+}
+
+#contact-details iframe {
+   width: 100%;
+   height: 100%;
+   border: none;
+}
+
+/* Form Section */
+#form-details {
+   background-color: #f4f4f4;
+   padding: 2rem;
+   text-align: center;
+}
+
+#form-details form {
+   max-width: 70%;
+   margin: 0 auto;
+}
+
+#form-details span {
+   font-size: 1.5rem;
+   color: #333;
+}
+
+#form-details h2 {
+   font-size: 1.875rem;
+   color: #333;
+}
+
+#form-details input,
+#form-details textarea {
+   width: 100%;
+   margin: 1rem 0;
+   padding: 1rem;
+   border: 1px solid #ccc;
+}
+
+#form-details button {
+   padding: 1rem 2rem;
+   background-color: #e44d26;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+#form-details button:hover {
+   background-color: #333;
+}
+
+/* People Section */
+#form-details .people {
+   display: flex;
+   justify-content: space-around;
+   margin-top: 2rem;
+}
+
+#form-details .people div {
+   max-width: 45%;
+}
+
+#form-details .people img {
+   width: 100%;
+   border-radius: 0.8rem;
+}
+
+#form-details .people p {
+   font-size: 1rem;
+   color: #666;
+}
+
+#form-details .people span {
+   color: #333;
+   font-weight: bold;
+}
+
+
+/* Feedback form styles */
+.feedback-form {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 3rem 2rem; /* Adjust padding as needed */
+}
+
+.feedback-form h1 {
+   font-size: 3rem;
+   margin-bottom: 1.5rem;
+   font-weight: bold;
+}
+
+#feedbackForm {
+   max-width: 40rem; /* Adjust max-width as needed */
+   width: 100%;
+}
+
+#feedbackForm label {
+   display: block;
+   margin-bottom: 0.5rem;
+   font-size: 1.8rem;
+}
+
+#feedbackForm input[type="number"],
+#feedbackForm textarea,
+#feedbackForm input[type="text"] {
+   width: 100%;
+   padding: 1rem;
+   margin-bottom: 1.5rem; /* Adjust margin as needed */
+   font-size: 1.6rem;
+   border: 0.1rem solid var(--light-color); /* Use light color for border */
+   border-radius: 0.3rem;
+}
+
+#feedbackForm textarea {
+   resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+#feedbackForm button {
+   width: 100%;
+   padding: 1.5rem;
+   background-color: var(--main-color);
+   color: var(--white);
+   font-size: 1.8rem;
+   cursor: pointer;
+   border: none;
+   border-radius: 0.3rem;
+}
+
+#feedbackForm button:hover {
+   background-color: var(--black);
+}
+
+/* End of feedback form styles */
+/* Logout section styles */
+#logoutContainer {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 1000;
+}
+
+.logout {
+   background-color: var(--white);
+   max-width: 30rem;
+   width: 100%;
+   padding: 2rem;
+   text-align: center;
+   border-radius: 0.5rem;
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.logout h1 {
+   font-size: 2.5rem;
+   margin-bottom: 1.5rem;
+   color: var(--black);
+}
+
+.logout p {
+   font-size: 1.8rem;
+   margin-bottom: 2rem;
+   color: var(--light-color);
+}
+
+.logout button {
+   padding: 1rem 2rem;
+   background-color: var(--main-color);
+   color: var(--white);
+   font-size: 1.8rem;
+   cursor: pointer;
+   border: none;
+   border-radius: 0.3rem;
+   transition: background-color 0.3s ease;
+}
+
+.logout button:hover {
+   background-color: var(--black);
+}
+
+/* End of logout section styles */
+
+/* Login section styles */
+#loginContainer {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 1000;
+}
+
+.login {
+   background-color: var(--white);
+   max-width: 30rem;
+   width: 100%;
+   padding: 2rem;
+   text-align: center;
+   border-radius: 0.5rem;
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.login h1 {
+   font-size: 2.5rem;
+   margin-bottom: 1.5rem;
+   color: var(--black);
+}
+
+#loginForm {
+   max-width: 20rem;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.login label {
+   display: block;
+   margin-bottom: 0.5rem;
+   font-size: 1.8rem;
+   color: var(--black);
+}
+
+.login input {
+   width: 100%;
+   padding: 0.8rem;
+   margin-bottom: 1rem;
+   font-size: 1.6rem;
+   border: 0.1rem solid var(--light-color);
+   border-radius: 0.3rem;
+}
+
+.login button {
+   padding: 1rem 2rem;
+   background-color: var(--main-color);
+   color: var(--white);
+   font-size: 1.8rem;
+   cursor: pointer;
+   border: none;
+   border-radius: 0.3rem;
+   transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+   background-color: var(--black);
+}
+
+/* Custom CSS for the About Description Section */
+
+/* About Header */
+#page-header {
+   background-color: #f4f4f4;
+   padding: 2rem;
+   text-align: center;
+}
+
+#page-header h2 {
+   font-size: 1.5rem;
+   color: #333;
+}
+
+#page-header p {
+   font-size: 1rem;
+   color: #666;
+}
+
+/* About Content */
+#about-head {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 2rem;
+}
+
+#about-head img {
+   max-width: 100%;
+   border-radius: 0.8rem;
+}
+
+#about-head div {
+   max-width: 60%;
+   padding-left: 2rem;
+}
+
+#about-head h2 {
+   font-size: 1.875rem;
+   color: #333;
+}
+
+#about-head p {
+   font-size: 1.125rem;
+   color: #666;
+   line-height: 1.6;
+}
+
+/* Newsletter Section */
+#newsletter {
+   background-color: #f4f4f4;
+   padding: 2rem;
+   text-align: center;
+}
+
+#newsletter h4 {
+   font-size: 1.5rem;
+   color: #333;
+}
+
+#newsletter p {
+   font-size: 1rem;
+   color: #666;
+   margin-top: 1rem;
+}
+
+#newsletter span {
+   color: #e44d26;
+   font-weight: bold;
+}
+
+#newsletter .form {
+   margin-top: 2rem;
+}
+
+#newsletter input {
+   width: 70%;
+   padding: 1rem;
+   border: 1px solid #ccc;
+}
+
+#newsletter button {
+   padding: 1rem 2rem;
+   background-color: #e44d26;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+#newsletter button:hover {
+   background-color: #333;
+}
+
+/* End of login section styles */
+/* Add your common CSS styles and rem values here */
+
+/* Add your common CSS styles and rem values here */
+
+/* Styles for the service request form section */
+.service-request-form {
+   text-align: center;
+   margin-top: 3rem; /* Adjust margin as needed */
+}
+
+.service-request-form .grid-container {
+   display: flex;
+   gap: 2rem; /* Adjust gap as needed */
+   justify-content: center;
+}
+
+.service-request-form .grid-container > div {
+   background-color: var(--white);
+   box-shadow: var(--box-shodow);
+   padding: 2rem;
+   text-align: center;
+   flex: 1; /* Consume equal horizontal space */
+}
+
+.service-request-form .description h1 {
+   font-size: 3rem;
+   margin-bottom: 1.5rem;
+   font-weight: bold;
+   color: var(--black);
+}
+
+.service-request-form .description p {
+   line-height: 1.8;
+   font-size: 1.6rem;
+   color: var(--light-color);
+   margin-bottom: 1.5rem; /* Adjust margin as needed */
+}
+
+.service-request-form .description button {
+   display: inline-block;
+   padding: 1rem 2rem;
+   font-size: 1.8rem;
+   background-color: var(--main-color); /* Assuming you have a --main-color variable */
+   color: var(--white); /* Assuming you have a --white variable */
+   border: none;
+   border-radius: 0.313rem; /* Equivalent to 5px */
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.service-request-form .description button:hover {
+   background-color: var(--black); /* Assuming you have a --black variable */
+}
+
+.service-request-form .image-container img {
+   margin: 1rem 0;
+   width: 100%;
+   border-radius: 1rem; /* Equivalent to 10px */
+}
+
+.service-request-form form {
+   max-width: 40rem;
+   width: 100%;
+   margin-top: 2rem; /* Adjust margin as needed */
+}
+
+.service-request-form form label {
+   display: block;
+   margin-bottom: 0.5rem;
+   font-size: 1.8rem;
+}
+
+.service-request-form form input,
+.service-request-form form textarea {
+   width: 100%;
+   padding: 0.8rem;
+   margin-bottom: 1rem;
+   font-size: 1.6rem;
+   border: 0.1rem solid var(--light-color);
+   border-radius: 0.25rem;
+}
+
+
+
+/* Service Request Details styles */
+.service-request-details {
+   max-width: 60rem;
+   width: 100%;
+   margin: 2rem auto; /* Add margin top and bottom */
+   padding: 2rem;
+   background-color: var(--white);
+   border-radius: 0.5rem;
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.service-request-details h1 {
+   font-size: 2.5rem;
+   margin-bottom: 1.5rem;
+   color: var(--black);
+   text-align: center;
+}
+
+.request-details h2 p {
+   margin-bottom: 2rem;
+   font-size: 1.8rem;
+}
+
+/* Add some spacing for buttons */
+.request-actions {
+   display: flex;
+   gap: 1rem;
+   justify-content: center;
+   margin-top: 2rem; /* Add margin top for button section */
+}
+
+.request-actions button {
+   padding: 1rem 2rem;
+   background-color: var(--main-color);
+   color: var(--white);
+   font-size: 1.8rem;
+   cursor: pointer;
+   border: none;
+   border-radius: 0.3rem;
+   transition: background-color 0.3s ease;
+}
+
+.request-actions button:hover {
+   background-color: var(--black);
+}
+/* end of request form */
+/* Styles for the services marketplace section */
+.services-marketplace {
+   text-align: center;
+   padding-top: 4rem; /* Add space at the top */
+}
+
+.services-marketplace h1 {
+   font-size: 3rem;
+   margin-bottom: 2rem;
+   color: var(--black);
+}
+
+.service-listing {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); /* Adjust the column width as needed */
+   gap: 2rem;
+   justify-content: center;
+}
+
+.service-item {
+   background-color: var(--white);
+   box-shadow: var(--box-shodow);
+   padding: 2rem;
+   text-align: center;
+   transition: box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Add hover effect */
+}
+
+.service-item h2 {
+   font-size: 2rem;
+   margin-bottom: 1rem;
+   color: var(--black);
+   text-transform: capitalize;
+}
+
+.service-item p {
+   line-height: 1.6;
+   font-size: 1.6rem;
+   color: var(--light-color);
+   margin-bottom: 1rem;
+}
+
+.service-item button {
+   padding: 1rem 2rem;
+   background-color: var(--main-color);
+   color: var(--white);
+   font-size: 1.8rem;
+   cursor: pointer;
+   border: none;
+   border-radius: 0.3rem;
+   transition: background-color 0.3s ease;
+}
+
+.service-item button:hover {
+   background-color: var(--black);
+}
+/* End of services marketplace styles */
+/* Notification Center Styles */
+.notifications-center {
+    max-width: 60rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.notifications-center h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+    text-align: center;
+}
+
+.notifications-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.notification-item {
+    background-color: var(--white);
+    box-shadow: var(--box-shodow);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.notification-item .timestamp {
+    color: var(--light-color);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.notification-item p {
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+.clear-notifications {
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.clear-notifications:hover {
+    background-color: var(--black);
+}
+/* End of Notification Center Styles */
+
+/* Service Details Grid Styles */
+.service-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-details {
+    max-width: 35rem;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: var(--box-shodow);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.service-details:hover {
+    transform: scale(1.05);
+}
+
+.service-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+    text-align: center;
+}
+
+.service-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.service-info p {
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.request-service-btn {
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.request-service-btn:hover {
+    background-color: var(--black);
+}
+/* End of Service Details Grid Styles */
+
+/* Equipment Listings Marketplace Grid Styles */
+.equipment-listings-marketplace-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.equipment-listing {
+    max-width: 40rem;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: var(--box-shodow);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.equipment-listing:hover {
+    transform: scale(1.05);
+}
+
+.equipment-listing h1,
+.equipment-listing h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.equipment-listing p {
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.inquire-btn {
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.inquire-btn:hover {
+    background-color: var(--black);
+}
+/* End of Equipment Listings Marketplace Grid Styles */
+
+/* Equipment Details Styles */
+.equipment-details {
+    text-align: center;
+}
+
+.equipment-details-item {
+    max-width: 40rem;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: var(--box-shodow);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.equipment-details-item:hover {
+    transform: scale(1.05);
+}
+
+.equipment-details-item h1,
+.equipment-details-item h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+}
+
+.equipment-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.equipment-details-item p {
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.contact-btn {
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.contact-btn:hover {
+    background-color: var(--black);
+}
+/* End of Equipment Details Styles */
+
+/* Messaging Interface Styles */
+.messaging-interface {
+    text-align: center;
+}
+
+/* Inbox Styles */
+.inbox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.message {
+    background-color: var(--white);
+    box-shadow: var(--box-shodow);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.message:hover {
+    transform: scale(1.05);
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.sender {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--black);
+}
+
+.timestamp {
+    font-size: 1.2rem;
+    color: var(--light-color);
+}
+
+.reply-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.6rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease;
+}
+
+.reply-btn:hover {
+    background-color: var(--black);
+}
+
+/* Compose Message Styles */
+.compose {
+    max-width: 40rem;
+    width: 100%;
+    margin: 2rem auto;
+    background-color: var(--white);
+    box-shadow: var(--box-shodow);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.compose h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+}
+
+.compose label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--black);
+}
+
+.compose input,
+.compose textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    border: 0.1rem solid var(--light-color);
+    border-radius: 0.3rem;
+}
+
+.send-btn {
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.send-btn:hover {
+    background-color: var(--black);
+}
+/* End of Messaging Interface Styles */
+/* Styles for the suggestion section */
+.suggestions {
+    width: 100%;
+    background-color: var(--light-grey); /* Add your desired background color */
+    padding: 4rem 0; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.suggestions h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+}
+
+#suggestionForm {
+    max-width: 30rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.suggestions label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+.suggestions textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    border: 0.1rem solid var(--light-color);
+    border-radius: 0.5rem;
+}
+
+.suggestions button {
+    padding: 1.5rem 3rem;
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.suggestions button:hover {
+    background-color: var(--black);
+}
+/* End of suggestion section styles */
+
+
+
+
+/* Media query for mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+   body {
+       font-family: 'YourFont', sans-serif;
+       margin: 0;
+       padding: 0;
+       font-size: 0.875rem;
+   }
+
+   .container {
+       width: 80%;
+       margin: 0 auto;
+   }
+
+   /* Navigation styles */
+   nav {
+       background-color: #333;
+   }
+
+   nav ul {
+       list-style: none;
+       padding: 0;
+       margin: 0;
+       display: flex;
+   }
+
+   nav li {
+       margin-right: 20px;
+   }
+
+   nav a {
+       text-decoration: none;
+       color: #fff;
+       font-weight: bold;
+   }
+
+   /* Footer styles */
+   footer {
+       background-color: #333;
+       color: #fff;
+       padding: 1.25rem; /* Adjust padding as needed */
+       text-align: center;
+   }
+
+   /* Add other mobile-specific styles here */
+
+   /* Media query for 477px */
+   @media only screen and (max-width: 477px) {
+       body {
+           font-size: 0.75rem;
+       }
+
+       .container {
+           width: 90%;
+       }
+
+      
+ 
+     nav {
+         padding: 10px;
+     }
+ 
+     .logo {
+         font-size: 1.5rem;
+     }
+ 
+     .image-container img {
+         max-width: 100%;
+         height: auto;
+     }
+
+       /* Add styles specific to 477px width here */
+   }
+}
+
+/* Media query for tablet devices (768px to 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+   body {
+       font-family: 'YourFont', sans-serif;
+       margin: 0;
+       padding: 0;
+       font-size: 1rem;
+   }
+
+   .container {
+       width: 80%;
+       margin: 0 auto;
+   }
+
+   /* Navigation styles */
+   nav {
+       background-color: #333;
+   }
+
+   nav ul {
+       list-style: none;
+       padding: 0;
+       margin: 0;
+       display: flex;
+   }
+
+   nav li {
+       margin-right: 20px;
+   }
+
+   nav a {
+       text-decoration: none;
+       color: #fff;
+       font-weight: bold;
+   }
+
+   .search-container {
+      margin-top: 10px;
+  }
+
+  .image-container img {
+      max-width: 100%;
+      height: auto;
+  }
+
+   /* Footer styles */
+   footer {
+       background-color: #333;
+       color: #fff;
+       padding: 1.25rem; /* Adjust padding as needed */
+       text-align: center;
+   }
+
+   /* Add other tablet-specific styles here */
+}
+

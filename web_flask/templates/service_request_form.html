@@ -1,0 +1,30 @@
+<!-- templates/service-request-form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <section class="service-request-form">
+            <h1>Service Request Form</h1>
+            <form action="{{ url_for('service_request_form') }}" method="post">
+                {{ form.hidden_tag() }}
+                
+                <div class="form-group">
+                    {{ form.service_type.label(class="form-label") }}
+                    {{ form.service_type(class="form-control") }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.equipment_details.label(class="form-label") }}
+                    {{ form.equipment_details(class="form-control", placeholder="Enter equipment details", rows="4") }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.user_comments.label(class="form-label") }}
+                    {{ form.user_comments(class="form-control", placeholder="Enter user comments", rows="4") }}
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Service Request</button>
+            </form>
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+
+
+    {% block content %}
+        <div class="container">
+            <section class="logout">
+                <h1>Logout</h1>
+                <p>Are you sure you want to logout?</p>
+                <form id="logoutForm">
+                    <div class="form-group">
+                        <label for="user_id">User ID:</label>
+                        <input type="text" id="user_id" class="form-control" placeholder="Enter your user ID" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="token">Token:</label>
+                        <input type="text" id="token" class="form-control" placeholder="Enter your token" required>
+                    </div>
+    
+                    <button type="submit" class="btn btn-danger">Logout</button>
+                </form>
+            </section>
+        </div>
+    {% endblock %}
+    

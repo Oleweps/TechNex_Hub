@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- user profile section -->
+    <div class="container">
+        <section class="user-profile">
+            <h1>User Profile</h1>
+            <div class="profile-details">
+                <h2>Username: {{ user.username }}</h2>
+                <p>Email: {{ user.email }}</p>
+                <p>Contact Details: {{ user.contact_details }}</p>
+            </div>
+            <button id="editProfileBtn">Edit Profile</button>
+            
+            <!-- Additional form for profile editing -->
+            <form id="editProfileForm" style="display: none;">
+                <label for="editUsername">Username:</label>
+                <input type="text" id="editUsername" name="editUsername" value="{{ user.username }}" required>
+
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail" name="editEmail" value="{{ user.email }}" required>
+
+                <label for="editContact">Contact Details:</label>
+                <input type="text" id="editContact" name="editContact" value="{{ user.contact_details }}" required>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+    </div>
+    <!-- user profile section ends here -->
+
+    <!-- Include the JavaScript for toggle functionality -->
+    <script>
+        document.getElementById('editProfileBtn').addEventListener('click', function () {
+            document.getElementById('editProfileForm').style.display = 'block';
+            document.querySelector('.profile-details').style.display = 'none';
+            document.getElementById('editProfileBtn').style.display = 'none';
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <section class="equipment-listing-marketplace">
+            <h1>Equipment Listings Marketplace</h1>
+            <form action="{{ url_for('equipment_listings_marketplace') }}" method="post">
+                {{ form.hidden_tag() }}
+
+                <!-- Form fields (same as before) -->
+
+                <button type="submit" class="btn btn-primary">List Equipment</button>
+            </form>
+
+            {% if equipment_listings %}
+                <div class="equipment-listing">
+                    {% for equipment in equipment_listings %}
+                        <div class="equipment-item">
+                            <h2>{{ equipment.equipment_name }}</h2>
+                            <p>Description: {{ equipment.description }}</p>
+                            <p>Condition: {{ equipment.condition }}</p>
+                            <p>Price: ${{ equipment.price }}</p>
+                            <p>Contact Details: {{ equipment.contact_details }}</p>
+                            <button class="inquire-equipment-btn" data-equipment-id="{{ equipment.id }}">Inquire Equipment</button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No equipment listings available at the moment.</p>
+            {% endif %}
+        </section>
+    </div>
+
+    
+{% endblock %}

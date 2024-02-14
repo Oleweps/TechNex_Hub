@@ -1,0 +1,49 @@
+<!-- templates/suggestion-form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <section class="suggestions">
+            <h1>Suggestions</h1>
+            <div class="suggestion-list">
+                {% for suggestion in suggestions %}
+                    <div class="suggestion">
+                        <div class="suggestion-header">
+                            <span class="user">{{ suggestion.user.username }}</span>
+                            <span class="timestamp">{{ suggestion.timestamp }}</span>
+                        </div>
+                        <p>{{ suggestion.content }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="compose-suggestion">
+                <h2>Submit Suggestion</h2>
+                <form id="suggestionForm" method="post" action="{{ url_for('suggestions') }}">
+                    {{ suggestion_form.hidden_tag() }}
+                    <div class="form-group">
+                        {{ suggestion_form.title.label(class="form-label") }}
+                        {{ suggestion_form.title(class="form-control", placeholder="Enter suggestion title") }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ suggestion_form.category.label(class="form-label") }}
+                        {{ suggestion_form.category(class="form-control") }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ suggestion_form.content.label(class="form-label") }}
+                        {{ suggestion_form.content(class="form-control", placeholder="Enter suggestion content", rows="4") }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ suggestion_form.user_id(class="form-control", type="hidden", value="1") }}
+                    </div>
+
+                    <button type="button" class="submit-suggestion-btn btn btn-primary">Submit Suggestion</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+   
+{% endblock %}

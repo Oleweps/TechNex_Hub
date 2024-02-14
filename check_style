@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# check javascript styles
+semistandard --fix web_dynamic/static/scripts/*.js --global $

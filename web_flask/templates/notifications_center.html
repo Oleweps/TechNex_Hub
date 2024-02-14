@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <section class="notifications-center">
+            <h1>Notifications Center</h1>
+            <div class="notifications-list">
+                {% if notifications %}
+                    {% for notification in notifications %}
+                        <div class="notification-item">
+                            <span class="timestamp">{{ notification.timestamp.strftime('%Y-%m-%d %H:%M %p') }}</span>
+                            <p>{{ notification.message }}</p>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No notifications available at the moment.</p>
+                {% endif %}
+            </div>
+            <button class="clear-notifications-btn">Clear All Notifications</button>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add event listener to the "Clear All Notifications" button
+            var clearButton = document.querySelector('.clear-notifications-btn');
+            clearButton.addEventListener('click', function () {
+                // You can implement the logic to clear notifications here
+                console.log('Clearing all notifications');
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- admin section -->
+    <div class="container">
+        <section class="admin-dashboard">
+            <h1>Admin Dashboard</h1>
+            <div class="tools">
+                <div class="user-management">
+                    <h2>User Management</h2>
+                    <!-- Display user data dynamically -->
+                    <ul id="userList">
+                        <!-- User data will be dynamically populated here -->
+                    </ul>
+                </div>
+                <div class="service-requests">
+                    <h2>Service Requests</h2>
+                    <!-- Display service requests data dynamically -->
+                    <ul id="requestList">
+                        <!-- Service request data will be dynamically populated here -->
+                    </ul>
+                </div>
+                <div class="listings-management">
+                    <h2>Listings Management</h2>
+                    <!-- Display equipment listings data dynamically -->
+                    <ul id="listingList">
+                        <!-- Equipment listing data will be dynamically populated here -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- admin section -->
+
+    
+{% endblock %}

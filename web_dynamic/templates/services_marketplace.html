@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <section class="services-marketplace">
+            <h1>Services Marketplace</h1>
+            {% if services %}
+                <div class="service-listing">
+                    {% for service in services %}
+                        <div class="service-item">
+                            <h2>{{ service.name }}</h2>
+                            <p>Description: {{ service.description }}</p>
+                            <p>Cost: ${{ service.cost }}</p>
+                            <button class="select-service-btn" data-service-id="{{ service.id }}">Select Service</button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No services available at the moment.</p>
+            {% endif %}
+        </section>
+    </div>
+
+    
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- feedback form section starts here -->
+    <div class="container">
+        <section class="feedback-form">
+            <h1>Service Feedback</h1>
+            <form id="feedbackForm" action="{{ url_for('feedback_form') }}" method="post">
+                {{ form.hidden_tag() }}
+                
+                <div class="form-group">
+                    {{ form.rating.label(class="form-label", for="ratings") }}
+                    {{ form.rating(class="form-control", id="ratings", type="number", min="1", max="5", required) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.comments.label(class="form-label", for="comments") }}
+                    {{ form.comments(class="form-control", id="comments", rows="4", required) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.timestamp.label(class="form-label", for="timestamp") }}
+                    {{ form.timestamp(class="form-control", id="timestamp", readonly, value="2024-01-01 12:00 PM") }}
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Feedback</button>
+            </form>
+        </section>
+    </div>
+    <!-- feedback form section ends here -->
+
+    
+{% endblock %}

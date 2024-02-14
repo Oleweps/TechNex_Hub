@@ -1,0 +1,25 @@
+<!-- templates/notifications_center.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <section class="notifications-center">
+            <h1>Notifications Center</h1>
+            <div class="notifications-list">
+                {% if notifications %}
+                    {% for notification in notifications %}
+                        <div class="notification-item">
+                            <span class="timestamp">{{ notification.timestamp.strftime('%Y-%m-%d %H:%M %p') }}</span>
+                            <p>{{ notification.message }}</p>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No notifications available at the moment.</p>
+                {% endif %}
+            </div>
+            <button class="clear-notifications-btn">Clear All Notifications</button>
+        </section>
+    </div>
+
+    
+{% endblock %}

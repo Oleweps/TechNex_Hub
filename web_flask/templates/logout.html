@@ -1,0 +1,25 @@
+<!-- templates/logout.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <section class="logout">
+            <h1>Logout</h1>
+            <p>Are you sure you want to logout?</p>
+            <form action="{{ url_for('logout') }}" method="post">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.user_id.label(class="form-label") }}
+                    {{ form.user_id(class="form-control", placeholder="Enter your user ID", required) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.token.label(class="form-label") }}
+                    {{ form.token(class="form-control", placeholder="Enter your token", required) }}
+                </div>
+
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </form>
+        </section>
+    </div>
+{% endblock %}

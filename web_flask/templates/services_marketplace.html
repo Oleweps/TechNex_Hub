@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <section class="services-marketplace">
+            <h1>Services Marketplace</h1>
+            {% if services %}
+                <div class="service-listing">
+                    {% for service in services %}
+                        <div class="service-item">
+                            <h2>{{ service.name }}</h2>
+                            <p>Description: {{ service.description }}</p>
+                            <p>Cost: ${{ service.cost }}</p>
+                            <button class="select-service-btn" data-service-id="{{ service.id }}">Select Service</button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No services available at the moment.</p>
+            {% endif %}
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add event listener to all "Select Service" buttons
+            var selectButtons = document.querySelectorAll('.select-service-btn');
+            selectButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    // Retrieve the service ID from the button's data attribute
+                    var serviceId = button.getAttribute('data-service-id');
+
+                    // You can now perform some action with the serviceId, for example,
+                    // navigate to a new page or make an AJAX request to the server.
+                    console.log('Service selected with ID:', serviceId);
+                });
+            });
+        });
+    </script>
+{% endblock %}

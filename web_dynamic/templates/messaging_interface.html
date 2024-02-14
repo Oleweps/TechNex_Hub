@@ -1,0 +1,42 @@
+<!-- templates/message-form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <section class="messaging-interface">
+            <h1>Messaging Interface</h1>
+            <div class="inbox">
+                {% for message in messages %}
+                    <div class="message">
+                        <div class="message-header">
+                            <span class="sender">{{ message.sender.username }}</span>
+                            <span class="timestamp">{{ message.timestamp }}</span>
+                        </div>
+                        <p>{{ message.content }}</p>
+                        <button class="reply-btn" data-sender-id="{{ message.sender.id }}">Reply</button>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="compose">
+                <h2>Compose Message</h2>
+                <form id="messageForm" method="post" action="{{ url_for('send_message') }}">
+                    {{ form.hidden_tag() }}
+
+                    <div class="form-group">
+                        {{ form.receiver_id.label(class="form-label") }}
+                        {{ form.receiver_id(class="form-control", id="receiver_id", placeholder="Enter recipient ID", required) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.content.label(class="form-label") }}
+                        {{ form.content(class="form-control", placeholder="Enter your message", rows="4", required) }}
+                    </div>
+
+                    <button type="submit" class="send-btn btn btn-primary">Send</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    
+{% endblock %}

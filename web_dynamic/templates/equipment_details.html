@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <section class="equipment-details">
+            <h1>Equipment Details</h1>
+            {% if equipment %}
+                <div class="equipment-item">
+                    <h2>{{ equipment.equipment_name }}</h2>
+                    <p>Description: {{ equipment.description }}</p>
+                    <p>Condition: {{ equipment.condition }}</p>
+                    <p>Price: ${{ equipment.price }}</p>
+                    <p>Contact Details: {{ equipment.contact_details }}</p>
+                    <button class="contact-seller-btn" data-equipment-id="{{ equipment.id }}">Contact Seller</button>
+                </div>
+            {% else %}
+                <p>Equipment details not available.</p>
+            {% endif %}
+        </section>
+    </div>
+
+    
+{% endblock %}

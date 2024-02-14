@@ -1,0 +1,40 @@
+<!-- templates/user-registration.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <section class="user-registration">
+            <h1>User Registration</h1>
+            <form method="post" action="{{ url_for('register') }}">
+                {{ form.hidden_tag() }}
+                <!-- Include form fields for user registration -->
+                <div class="form-group">
+                    {{ form.username.label(class="form-label") }}
+                    {{ form.username(class="form-control", placeholder="Enter your username") }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.email.label(class="form-label") }}
+                    {{ form.email(class="form-control", placeholder="Enter your email") }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.password.label(class="form-label") }}
+                    {{ form.password(class="form-control", placeholder="Enter your password") }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.contact_details.label(class="form-label") }}
+                    {{ form.contact_details(class="form-control", placeholder="Enter your contact details") }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.is_technician(class="form-check-input") }}
+                    {{ form.is_technician.label(class="form-check-label") }}
+                </div>
+
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        </section>
+    </div>
+{% endblock %}
