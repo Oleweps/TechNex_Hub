@@ -4,7 +4,6 @@
 from models.base_model import BaseModel, Base
 from models import storage
 from os import getenv
-import models
 from sqlalchemy import Column, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 

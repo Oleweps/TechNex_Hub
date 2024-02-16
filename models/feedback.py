@@ -7,7 +7,6 @@ from wtforms.validators import DataRequired, Length
 from models.base_model import BaseModel, Base
 from models import storage
 from os import getenv
-import models
 from sqlalchemy import Column, String, Float, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 

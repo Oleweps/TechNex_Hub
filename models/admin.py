@@ -1,6 +1,5 @@
 #!/usr/bin/python
 """This module creates the Admin class"""
-import models
 from models.base_model import BaseModel, Base
 from os import getenv
 from models import storage

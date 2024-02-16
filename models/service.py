@@ -3,7 +3,6 @@
 from models.base_model import BaseModel, Base
 from models import storage
 from os import getenv
-import models
 from sqlalchemy import Column, String, Float
 
 class Service(BaseModel, Base):

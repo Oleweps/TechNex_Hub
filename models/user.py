@@ -4,7 +4,6 @@
 from models.base_model import BaseModel, Base
 from models import storage
 from os import getenv
-import models
 from models.message import Message
 from models.feedback import Feedback
 from sqlalchemy import Column, Integer, String
