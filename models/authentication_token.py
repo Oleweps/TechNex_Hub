@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """This module creates the AuthenticationToken class"""
+
+import models
 from models.base_model import BaseModel, Base
-from models import storage
 from os import getenv
 from sqlalchemy import Column, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
@@ -16,7 +17,7 @@ class AuthenticationToken(BaseModel, Base):
     - user (relationship): Many-to-one relationship with User
     """
 
-    if storage.storage_t == 'db':
+    if models.storage_t == 'db':
         __tablename__ = 'authentication_tokens'
 
         user_id = Column(String(60), ForeignKey('users.id'), nullable=False)

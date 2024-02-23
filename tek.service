@@ -1,5 +1,5 @@
 [Unit]
-Description=Gunicorn instance to serve technex_hub
+Description=Gunicorn instance to serve TechNex_Hub
 After=network.target
 
 [Service]
@@ -11,9 +11,8 @@ Environment="TEK_MYSQL_PWD=tek_dev_pwd"
 Environment="TEK_MYSQL_HOST=localhost"
 Environment="TEK_MYSQL_DB=tek_dev_db"
 Environment="TEK_TYPE_STORAGE=db"
-ExecStart=gunicorn --workers 3 --bind unix:/home/ubuntu/TechNex_Hub/myproject.sock --umask 007 --error-logfile /tmp/airbnb-error.log --access-logfile 
-/tmp/airbnb-access.log wsgi:app
 ExecReload=/bin/kill -s HUP $MAINPID
+ExecStart=/home/ubuntu/TechNex_Hub/myprojectenv/bin/gunicorn --workers 3 --bind 0.0.0.0:5003 -m 007 wsgi:app
 KillMode=mixed
 TimeoutStopSec=5
 PrivateTmp=true

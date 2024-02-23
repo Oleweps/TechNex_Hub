@@ -1,10 +1,21 @@
+#!/usr/bin/python3
+"""
+Contains class BaseModel
+"""
+
 from sqlalchemy import Column, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from uuid import uuid4
 from datetime import datetime
 import models
+from os import getenv
 
-Base = declarative_base()
+time = "%Y-%m-%dT%H:%M:%S.%f"
+
+if models.storage_t == "db":
+    Base = declarative_base()
+else:
+    Base = object
 
 class BaseModel(Base):
     """A class named BaseModel

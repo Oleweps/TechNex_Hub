@@ -4,8 +4,6 @@ initialize the models package
 """
 
 from os import getenv
-from models.engine.db_storage import DBStorage
-from models.engine.file_storage import FileStorage
 
 
 storage_t = getenv("TEK_TYPE_STORAGE")

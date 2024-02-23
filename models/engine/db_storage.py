@@ -1,16 +1,18 @@
 #!/usr/bin/python3
+"""
+Contains the class DBStorage
+"""
+import models
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
-from models.base_model import Base
+from models.base_model import BaseModel, Base
 from os import getenv
-
-# Import all models dynamically
 from models.user import User
 from models.service_request import ServiceRequest
 from models.service import Service
 from models.equipment_listing import EquipmentListing
 from models.message import Message
-from models.auth_token import AuthenticationToken
+from models.authentication_token import AuthenticationToken
 from models.feedback import Feedback
 from models.suggestion import Suggestion
 from models.admin import Admin
@@ -49,10 +51,7 @@ class Storage:
         if env == "tektest":
             Base.metadata.drop_all(self.__engine)
 
-        Base.metadata.create_all(self.__engine)
-        session_factory = sessionmaker(bind=self.__engine, expire_on_commit=False)
-        self.__session = scoped_session(session_factory)
-
+        
     def all(self, cls=None):
         """Return a dictionary of objects"""
         obj_dict = {}

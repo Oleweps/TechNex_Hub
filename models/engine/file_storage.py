@@ -2,11 +2,11 @@
 """
 Contains the FileStorage class
 """
-
+import models
 import json
 from models.admin import Admin
-from models.auth_token import AuthenticationToken
-from models.base_model import BaseModel
+from models.authentication_token import AuthenticationToken
+from models.base_model import BaseModel, Base
 from models.equipment_listing import EquipmentListing
 from models.feedback import Feedback
 from models.message import Message

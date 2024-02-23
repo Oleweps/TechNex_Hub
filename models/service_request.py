@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """This module creates the ServiceRequest class"""
 
+import models
 from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField, SelectField, SubmitField
 from wtforms.validators import DataRequired, Length
 from models.base_model import BaseModel, Base
-from models import storage
 from os import getenv
 from sqlalchemy import Column, String, Enum, ForeignKey
 from sqlalchemy.orm import relationship
@@ -19,7 +19,7 @@ class ServiceRequestForm(FlaskForm):
 
 class ServiceRequest(BaseModel, Base):
     
-    if storage.storage_t == 'db':
+    if models.storage_t == 'db':
         __tablename__ = 'service_requests'
         
         user_id = Column(String(60), ForeignKey('users.id'), nullable=False)

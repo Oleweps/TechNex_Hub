@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """This module creates the feedback class"""
 
+import models
 from flask_wtf import FlaskForm
 from wtforms import FloatField, TextAreaField, SubmitField
 from wtforms.validators import DataRequired, Length
 from models.base_model import BaseModel, Base
-from models import storage
 from os import getenv
 from sqlalchemy import Column, String, Float, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
@@ -27,7 +27,7 @@ class Feedback(BaseModel, Base):
     - technician (relationship): Many-to-one relationship with User (feedback recipient)
     """
 
-    if storage.storage_t == 'db':
+    if models.storage_t == 'db':
         __tablename__ = 'feedbacks'
 
         user_id = Column(String(60), ForeignKey('users.id'), nullable=False)

@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """This module creates the Suggestion class"""
 
+import models
 from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField, SubmitField, SelectField, DateTimeField
 from wtforms.validators import DataRequired, Length
 from models.base_model import BaseModel, Base
-from models import storage
 from os import getenv
 from sqlalchemy import Column, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
@@ -32,7 +32,7 @@ class Suggestion(BaseModel, Base):
     - user (relationship): Many-to-one relationship with User
     """
 
-    if storage.storage_t == 'db':
+    if models.storage_t == 'db':
         __tablename__ = 'suggestions'
 
         user_id = Column(String(60), ForeignKey('users.id'), nullable=False)

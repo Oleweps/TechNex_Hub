@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """This module creates the Service class"""
+
+import models
 from models.base_model import BaseModel, Base
-from models import storage
 from os import getenv
 from sqlalchemy import Column, String, Float
 
@@ -13,7 +14,7 @@ class Service(BaseModel, Base):
     - cost (float): The cost associated with the service
     """
 
-    if storage.storage_t == 'db':
+    if models.storage_t == 'db':
         __tablename__ = 'services'
 
         name = Column(String(50), nullable=False, unique=True)

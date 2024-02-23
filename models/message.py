@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module creates the Message class"""
 
+import models
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
@@ -9,7 +10,7 @@ from os import getenv
 from wtforms import StringField, TextAreaField, SubmitField
 from wtforms.fields.html5 import DateTimeField
 from wtforms.validators import DataRequired, Length
-from models import storage
+
 
 class MessageForm(FlaskForm):
     sender_id = StringField('Sender ID', validators=[DataRequired(), Length(max=60)])
@@ -29,7 +30,7 @@ class Message(BaseModel, Base):
     - receiver (relationship): Many-to-one relationship with User
     """
 
-    if storage.storage_t == 'db':
+    if models.storage_t == 'db':
         __tablename__ = 'messages'
 
         sender_id = Column(String(60), ForeignKey('users.id'), nullable=False)

@@ -1,561 +1,550 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
         <title>DLA Instrumentation Hub</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Your website description">
-    
+            
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
         
-    <link rel="stylesheet" type="text/css" href="styles/admin-dashboard.css" />
-    <link rel="stylesheet" type="text/css" href="styles/user-registration.css" />
-    <link rel="stylesheet" type="text/css" href="styles/user-profile.css" />
-    <link rel="stylesheet" type="text/css" href="styles/service-request.css" />
-    <link rel="stylesheet" type="text/css" href="styles/service-request-details.css" />
-    <link rel="stylesheet" type="text/css" href="styles/services-marketplace.css" />
-    <link rel="stylesheet" type="text/css" href="styles/service-details.css" />
-    <link rel="stylesheet" type="text/css" href="styles/equipment-listings-marketplace.css" />
-    <link rel="stylesheet" type="text/css" href="styles/equipment-details.css" />
-    <link rel="stylesheet" type="text/css" href="styles/messaging-interface.css" />
-    <link rel="stylesheet" type="text/css" href="styles/login.css" />
-    <link rel="stylesheet" type="text/css" href="styles/notifications-center.css" />
-    <link rel="stylesheet" type="text/css" href="styles/logout.css" />
-    <link rel="stylesheet" type="text/css" href="styles/feedback-form.css" />
-    <link rel="stylesheet" type="text/css" href="styles/suggestions.css" />
-          
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="../styles/custom.css">
-        <script src="../scripts/script.js"></script>
-    
-        <!-- Add your common stylesheets and links here -->
+                
     </head>
-<body>
-    
-        <!-- header section starts  -->
-<header class="header">
+    <body>
+        
+            <!-- header section starts  -->
+        <header class="header">
 
-    <!-- First Navigation Section -->
-    <nav class="navbar nav-1">
-       <section class="flex">
-        <a href="home.html" class="logo"><i class="fas fa-cogs"></i>TEK HUB</a>
- 
-          <!-- Search and Services Selection Section -->
-          <ul>
-          <div class="search-container">
-             <input type="text" placeholder="Search an equipment" id="equipmentSearch">
-             <button type="button">Search</button>
-             
-          </div>
-          </ul> 
-       </section>
-    </nav>
- 
-    <!-- Second Navigation Section -->
-    <nav class="navbar nav-2">
-       <section class="flex">
-          <div id="menu-btn" class="fas fa-bars"></div>
- 
-          <!-- Dropdown Menu -->
-          <div class="menu">
-             <ul>
-                <li><a href="#">User<i class="fas fa-angle-down"></i></a>
-                   <ul class="dropdown-content">
-                      
-                      <li><a href="user-profile.html">User Profile</a></li>
-                      <li><a href="logout.html" id="logoutButton">Logout</a></li>
-                   </ul>
-                </li>
-                <li><a href="#">Services<i class="fas fa-angle-down"></i></a>
-                   <ul class="dropdown-content">
-                      <li><a href="service-request-form.html">Service Request</a></li>
-                      <li><a href="service-request-details.html">Request Details</a></li>
-                      <li><a href="services-marketplace.html">Marketplace</a></li>
-                      <li><a href="service-details.html">Service Details</a></li>
-                   </ul>
-                </li>
-                <li><a href="#">Equipment<i class="fas fa-angle-down"></i></a>
-                   <ul class="dropdown-content">
-                      <li><a href="equipment-listings-marketplace.html">Equipment Listings</a></li>
-                      <li><a href="equipment-details.html">Equipment Details</a></li>
-                   </ul>
-                </li>
-                <li><a href="#">More<i class="fas fa-angle-down"></i></a>
-                   <ul class="dropdown-content">
-                      <li><a href="messaging-interface.html">Messages</a></li>
-                      <li><a href="notifications-center.html">Notifications</a></li>
-                      <li><a href="suggestions.html">Suggestions</a></li>
-                      <li><a href="feedback-form.html">Feedback</a></li>
-                   </ul>
-                </li>
-             </ul>
-          </div>
- 
-          <!-- Additional Navigation Items -->
-          <ul>
-             <li><a href="#">saved <i class="far fa-heart"></i></a></li>
-             <li><a href="#">account <i class="fas fa-angle-down"></i></a>
-                <ul class="dropdown-content">
-                   <li><a href="login.html">login</a></li>
-                   <li><a href="user-registration.html">register</a></li>
+            <!-- First Navigation Section -->
+            <nav class="navbar nav-1">
+            <section class="flex">
+                <a href="home.html" class="logo"><i class="fas fa-cogs"></i>TEK HUB</a>
+        
+                <!-- Search and Services Selection Section -->
+                <ul>
+                <div class="search-container">
+                    <input type="text" placeholder="Search an equipment" id="equipmentSearch">
+                    <button type="button">Search</button>
+                    
+                </div>
+                </ul> 
+            </section>
+            </nav>
+        
+            <!-- Second Navigation Section -->
+            <nav class="navbar nav-2">
+            <section class="flex">
+                <div id="menu-btn" class="fas fa-bars"></div>
+        
+                <!-- Dropdown Menu -->
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">User<i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-content">
+                            
+                            <li><a href="user-profile.html">User Profile</a></li>
+                            <li><a href="logout.html" id="logoutButton">Logout</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">Services<i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="service-request-form.html">Service Request</a></li>
+                            <li><a href="service-request-details.html">Request Details</a></li>
+                            <li><a href="services-marketplace.html">Marketplace</a></li>
+                            <li><a href="service-details.html">Service Details</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">Equipment<i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="equipment-listings-marketplace.html">Equipment Listings</a></li>
+                            <li><a href="equipment-details.html">Equipment Details</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">More<i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="messaging-interface.html">Messages</a></li>
+                            <li><a href="notifications-center.html">Notifications</a></li>
+                            <li><a href="suggestions.html">Suggestions</a></li>
+                            <li><a href="feedback-form.html">Feedback</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>
+        
+                <!-- Additional Navigation Items -->
+                <ul>
+                    <li><a href="#">saved <i class="far fa-heart"></i></a></li>
+                    <li><a href="#">account <i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-content">
+                        <li><a href="login.html">login</a></li>
+                        <li><a href="user-registration.html">register</a></li>
+                        </ul>
+                    </li>
                 </ul>
-             </li>
-          </ul>
-       </section>
-    </nav>
- 
- </header>
- <!-- header section ends -->
- 
-    <div class="container head">
-        <!-- Welcome Section -->
-        <section class="home">
-            <h1>Welcome to TEK HUB</h1>
-            <p>Explore the DLA Instrumentation Hub for all your equipment and service needs.</p>
-            <button class="explore-btn" onclick="showServices()">Explore Now</button>
-        </section>
-    </div>
-   
-    <div class="container register">
-        <!-- Introduction and User Registration Section -->
-        <section class="user-registration">
-            <!-- Grid Container -->
-            <div class="grid-container">
-                <!-- Introduction Section -->
-                <div class="introduction">
-                    <div class="intro-content">
-                        <h1>Unlock Limitless Possibilities with TEK HUB</h1>
-                        <p>Embark on a journey with us! Join our vibrant community at TEK HUB and discover a world of innovation in the DLA Instrumentation Hub. Your gateway to comprehensive solutions for all your equipment and service needs awaits.</p>
-                        <button class="signup-button">Sign Up Now</button>
+            </section>
+            </nav>
+        
+        </header>
+        <!-- header section ends -->
+    
+        <div class="container head">
+            <!-- Welcome Section -->
+            <section class="home">
+                <h1>Welcome to TEK HUB</h1>
+                <p>Explore the DLA Instrumentation Hub for all your equipment and service needs.</p>
+                <button class="explore-btn" onclick="showServices()">Explore Now</button>
+            </section>
+        </div>
+    
+        <div class="container register">
+            <!-- Introduction and User Registration Section -->
+            <section class="user-registration">
+                <!-- Grid Container -->
+                <div class="grid-container">
+                    <!-- Introduction Section -->
+                    <div class="introduction">
+                        <div class="intro-content">
+                            <h1>Unlock Limitless Possibilities with TEK HUB</h1>
+                            <p>Embark on a journey with us! Join our vibrant community at TEK HUB and discover
+                                a world of innovation in the DLA Instrumentation Hub. Your gateway to
+                                comprehensive solutions for all your equipment and service needs awaits.</p>
+                            <button class="signup-button">Sign Up Now</button>
+                        </div>
                     </div>
-                </div>
-    
-                <!-- Image Section -->
-                <div class="image-container">
-                    <img src="/images/join.jpg" alt="join us">
-                </div>
-            </div>
-    
-            <!-- User Registration Section (Hidden) -->
-            <div class="user-registration" style="display: none;">
-                <h2>Register Now</h2>
-                <form id="userRegistrationForm">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
-    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-    
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
-    
-                    <label for="contact">Contact Details:</label>
-                    <input type="text" id="contact" name="contact" required>
-    
-                    <button type="submit">Register</button>
-                </form>
-            </div>
-        </section>
-    </div>
-    <!-- Main Content ends -->
-   
-       
-       <!-- admin section -->
-<div class="container">
-    <section class="admin-dashboard">
-        <h1>Admin Dashboard</h1>
-        <div class="tools">
-            <div class="user-management">
-                <h2>User Management</h2>
-                <p>
-                    This section includes tools for managing users, roles, and accounts. You can view and update user information and roles.
-                </p>
-                <picture>
-                    <img src="images/icon-6.png" alt="User Management Image">
-                </picture>
-            </div>
-            <div class="service-requests">
-                <h2>Service Requests</h2>
-                <p>
-                    Manage service requests, view details, and update their status. This section provides tools for efficient handling of service requests.
-                </p>
-                <picture>
-                    <img src="images/icon-6.png" alt="Service Requests Image">
-                </picture>
-            </div>
-            <div class="listings-management">
-                <h2>Listings Management</h2>
-                <p>
-                    Administer equipment listings and services. Add, update, or remove listings for a well-organized platform.
-                </p>
-                <picture>
-                    <img src="images/icon-6.png" alt="Listings Management Image">
-                </picture>
-            </div>
+        
+                    <!-- Image Section -->
+                    <div class="image-container">
+                        <img src="/images/join.jpg" alt="join us">
+                    </div>
         </div>
-    </section>
-</div>
-
-    <!-- admin section -->
-    
-    <!-- user registration ends -->
-
-    <!--user profile starts here-->
-<div class="container user" style="display: none;">
-    <section class="user-profile">
-        <h1>User Profile</h1>
-        <div class="profile-picture">
-            <img src="/images/passport.jpg" alt="User Profile Picture">
-        </div>
-        <div class="profile-details">
-            <h2>Username: JohnDoe</h2>
-            <p>Email: john@example.com</p>
-            <p>Contact Details: 123-456-7890</p>
-        </div>
-        <button id="editProfileBtn">Edit Profile</button>
-        <section class="user-management">
-            <h2>Manage</h2>
-            <ul>
-                <li><a href="service_request-details.html">Service Requests</a></li>
-                <li><a href="equipment_listings_marketplace.html">Equipment Listings</a></li>
-                <li><a href="messaging_interface.html">Messages</a></li>
-                <li><a href="notifications_center.html">Notifications</a></li>
-            </ul>
-        </section>
-    </section>
-</div>
-<!-- user profile ends here-->
-
-
-    <!--feedback form section starts here -->
-    <div class="container" style="display: none;">
-        <section class="feedback-form">
-            <h1>Service Feedback</h1>
-            <form id="feedbackForm">
-                <label for="ratings">Ratings:</label>
-                <input type="number" id="ratings" name="ratings" min="1" max="5" required>
-
-                <label for="comments">Comments:</label>
-                <textarea id="comments" name="comments" rows="4" required></textarea>
-
-                <label for="timestamp">Timestamp:</label>
-                <input type="text" id="timestamp" name="timestamp" value="2024-01-01 12:00 PM" readonly>
-
-                <button type="submit">Submit Feedback</button>
-            </form>
-        </section>
-    </div>
-    <!-- feedback form ends here -->
-
-    <!-- logout section starts here -->
-    <div class="container" id="logoutContainer" style="display: none;">
-        <section class="logout">
-            <h1>Logout</h1>
-            <p>Are you sure you want to logout?</p>
-            <button onclick="logout()">Logout</button>
-        </section>
-    </div>
-   <!-- logout section ends here -->
-
-    <!-- login section starts here -->
-    <div class="container" id="loginContainer" style="display: none;">
-        <section class="login">
-            <h1>Login</h1>
-            <form id="loginForm">
+        
+                <!-- User Registration Section (Hidden) -->
+        <div class="user-registration" style="display: none;">
+            <h2>Register Now</h2>
+            <form id="userRegistrationForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+        
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-
+        
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
-
-                <button type="submit">Log In</button>
+        
+                <label for="contact">Contact Details:</label>
+                <input type="text" id="contact" name="contact" required>
+        
+                <button type="submit">Register</button>
             </form>
-        </section>
-    </div>
-    <!-- login section ends here -->
-    
-    
-    
-    
-    <!-- Service Request Form Section -->
-<section class="service-request-form">
-    <div class="grid-container">
-        <!-- Description Section -->
-        <div class="description">
-            <h1>Request Service</h1>
-            <p>Need assistance with your equipment? Our service team is here to help you. Click the button below to submit a service request, and our experts will get in touch with you promptly.</p>
-            <button id="showServiceForm">Request Service</button>
-        </div>
-
-        <!-- Image Section -->
-        <div class="image-container">
-            <img src="/images/request.jpg" alt="service request">
-        </div>
-    </div>
-
-    <!-- Service Request Form -->
-    <form id="serviceRequestForm" style="display: none;">
-        <label for="serviceType">Service Type:</label>
-        <input type="text" id="serviceType" name="serviceType" required>
-
-        <label for="equipmentDetails">Equipment Details:</label>
-        <textarea id="equipmentDetails" name="equipmentDetails" rows="4" required></textarea>
-
-        <label for="userComments">User Comments:</label>
-        <textarea id="userComments" name="userComments" rows="4"></textarea>
-
-        <button type="submit">Submit Service Request</button>
-    </form>
-</section>
-</div>
-<!-- Main Content ends -->
-
-    <!-- service request starts here -->
-    <div class="container" style="display: none;">
-        <section class="service-request-details">
-            <h1>Service Request Details</h1>
-            <div class="request-details">
-                <h2>Request ID: 123456</h2>
-                <p>Status: In Progress</p>
-                <p>Service Type: Calibration</p>
-                <p>Equipment Details: Equipment XYZ</p>
-                <p>User Comments: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div class="request-actions">
-                <button>Edit Request</button>
-                <button>Cancel Request</button>
-            </div>
-        </section>
-    </div>
-    <!-- service request ends here -->
-
+            </section>
+        </div>
+        <!-- Main Content ends -->
+    
+        
+        <!-- admin section -->
     <div class="container">
-        <section class="services-marketplace" style="display: none;">
-            <h1>Services Marketplace</h1>
-            <div class="service-listing">
-                <div class="service-item">
-                    <h2>Calibration Service</h2>
-                    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Cost: $50</p>
-                    <button>Select Service</button>
+        <section class="admin-dashboard">
+            <h1>Admin Dashboard</h1>
+            <div class="tools">
+                <div class="user-management">
+                    <h2>User Management</h2>
+                    <p>
+                        This section includes tools for managing users, roles, and accounts. You can view and
+                        update user information and roles.
+                    </p>
+                    <picture>
+                        <img src="images/icon-6.png" alt="User Management Image">
+                    </picture>
                 </div>
-    
-                <div class="service-item">
-                    <h2>Calibration Service</h2>
-                    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Cost: $50</p>
-                    <button>Select Service</button>
+                <div class="service-requests">
+                    <h2>Service Requests</h2>
+                    <p>
+                        Manage service requests, view details, and update their status. This section provides
+                        tools for efficient handling of service requests.
+                    </p>
+                    <picture>
+                        <img src="images/icon-6.png" alt="Service Requests Image">
+                    </picture>
                 </div>
-    
-                <div class="service-item">
-                    <h2>Calibration Service</h2>
-                    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Cost: $50</p>
-                    <button>Select Service</button>
+                <div class="listings-management">
+                    <h2>Listings Management</h2>
+                    <p>
+                        Administer equipment listings and services. Add, update, or remove listings for a 
+                        well-organized platform.
+                    </p>
+                    <picture>
+                        <img src="images/icon-6.png" alt="Listings Management Image">
+                    </picture>
                 </div>
+            </div>
+        </section>
+    </div>
+
+        <!-- admin section -->
+        
+        <!-- user registration ends -->
+
+        <!--user profile starts here-->
+    <div class="container user" style="display: none;">
+        <section class="user-profile">
+            <h1>User Profile</h1>
+            <div class="profile-picture">
+                <img src="/images/passport.jpg" alt="User Profile Picture">
+            </div>
+            <div class="profile-details">
+                <h2>Username: JohnDoe</h2>
+                <p>Email: john@example.com</p>
+                <p>Contact Details: 123-456-7890</p>
+            </div>
+            <button id="editProfileBtn">Edit Profile</button>
+            <section class="user-management">
+                <h2>Manage</h2>
+                <ul>
+                    <li><a href="service_request-details.html">Service Requests</a></li>
+                    <li><a href="equipment_listings_marketplace.html">Equipment Listings</a></li>
+                    <li><a href="messaging_interface.html">Messages</a></li>
+                    <li><a href="notifications_center.html">Notifications</a></li>
+                </ul>
+            </section>
+        </section>
+    </div>
+    <!-- user profile ends here-->
+
+
+        <!--feedback form section starts here -->
+        <div class="container" style="display: none;">
+            <section class="feedback-form">
+                <h1>Service Feedback</h1>
+                <form id="feedbackForm">
+                    <label for="ratings">Ratings:</label>
+                    <input type="number" id="ratings" name="ratings" min="1" max="5" required>
+
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" rows="4" required></textarea>
+
+                    <label for="timestamp">Timestamp:</label>
+                    <input type="text" id="timestamp" name="timestamp" value="2024-01-01 12:00 PM" readonly>
+
+                    <button type="submit">Submit Feedback</button>
+                </form>
+            </section>
+        </div>
+        <!-- feedback form ends here -->
+
+        <!-- logout section starts here -->
+        <div class="container" id="logoutContainer" style="display: none;">
+            <section class="logout">
+                <h1>Logout</h1>
+                <p>Are you sure you want to logout?</p>
+                <button onclick="logout()">Logout</button>
+            </section>
+        </div>
+    <!-- logout section ends here -->
+
+        <!-- login section starts here -->
+        <div class="container" id="loginContainer" style="display: none;">
+            <section class="login">
+                <h1>Login</h1>
+                <form id="loginForm">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">Log In</button>
+                </form>
+            </section>
+        </div>
+        <!-- login section ends here -->
+        
+        
+        
+        
+        <!-- Service Request Form Section -->
+    <section class="service-request-form">
+        <div class="grid-container">
+            <!-- Description Section -->
+            <div class="description">
+                <h1>Request Service</h1>
+                <p>Need assistance with your equipment? Our service team is here to help you. Click the 
+                    button below to submit a service request, and our experts will get in touch with you promptly.</p>
+                <button id="showServiceForm">Request Service</button>
+            </div>
+
+            <!-- Image Section -->
+            <div class="image-container">
+                <img src="/images/request.jpg" alt="service request">
+            </div>
+        </div>
+
+        <!-- Service Request Form -->
+        <form id="serviceRequestForm" style="display: none;">
+            <label for="serviceType">Service Type:</label>
+            <input type="text" id="serviceType" name="serviceType" required>
+
+            <label for="equipmentDetails">Equipment Details:</label>
+            <textarea id="equipmentDetails" name="equipmentDetails" rows="4" required></textarea>
+
+            <label for="userComments">User Comments:</label>
+            <textarea id="userComments" name="userComments" rows="4"></textarea>
+
+            <button type="submit">Submit Service Request</button>
+        </form>
+    </section>
+    </div>
+    <!-- Main Content ends -->
+
+        <!-- service request starts here -->
+        <div class="container" style="display: none;">
+            <section class="service-request-details">
+                <h1>Service Request Details</h1>
+                <div class="request-details">
+                    <h2>Request ID: 123456</h2>
+                    <p>Status: In Progress</p>
+                    <p>Service Type: Calibration</p>
+                    <p>Equipment Details: Equipment XYZ</p>
+                    <p>User Comments: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="request-actions">
+                    <button>Edit Request</button>
+                    <button>Cancel Request</button>
+                </div>
+            </section>
+        </div>
+        <!-- service request ends here -->
+
+        <div class="container">
+            <section class="services-marketplace" style="display: none;">
+                <h1>Services Marketplace</h1>
+                <div class="service-listing">
+                    <div class="service-item">
+                        <h2>Calibration Service</h2>
+                        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Cost: $50</p>
+                        <button>Select Service</button>
+                    </div>
+        
+                    <div class="service-item">
+                        <h2>Calibration Service</h2>
+                        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Cost: $50</p>
+                        <button>Select Service</button>
+                    </div>
+        
+                    <div class="service-item">
+                        <h2>Calibration Service</h2>
+                        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Cost: $50</p>
+                        <button>Select Service</button>
+                    </div>
+        
+                    <!-- Add more service items as needed -->
+                </div>
+            </section>
+        </div>
+        <!-- services market place ends here -->
+        
+
     
+        <div class="container" style="display: none;">
+            <section class="notifications-center">
+                <h1>Notifications Center</h1>
+                <div class="notifications-list">
+                    <!-- Notification Item 1 -->
+                    <div class="notification-item">
+                        <span class="timestamp">12:30 PM</span>
+                        <p>Your service request has been approved.</p>
+                    </div>
+        
+                    <!-- Notification Item 2 (Add more as needed) -->
+                    <div class="notification-item">
+                        <span class="timestamp">10:45 AM</span>
+                        <p>New message received from Admin.</p>
+                    </div>
+        
+                    <!-- Add more notification items as needed -->
+                </div>
+                <button class="clear-notifications">Clear All Notifications</button>
+            </section>
+        </div>
+        <!-- notification centre ends here -->
+        
+
+        <div class="container">
+            <section class="service-details-grid" style="display: none;">
+                <!-- Service Item 1 -->
+                <div class="service-details">
+                    <h1>Service Details</h1>
+                    <div class="service-info">
+                        <h2>Calibration Service</h2>
+                        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Cost: $50</p>
+                    </div>
+                    <button class="request-service-btn">Request Service</button>
+                </div>
+        
+                <!-- Service Item 2 (Add more as needed) -->
+                <div class="service-details">
+                    <h1>Service Details</h1>
+                    <div class="service-info">
+                        <h2>Maintenance Service</h2>
+                        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Cost: $75</p>
+                    </div>
+                    <button class="request-service-btn">Request Service</button>
+                </div>
+        
                 <!-- Add more service items as needed -->
-            </div>
-        </section>
-    </div>
-    <!-- services market place ends here -->
-    
-
-   
-    <div class="container" style="display: none;">
-        <section class="notifications-center">
-            <h1>Notifications Center</h1>
-            <div class="notifications-list">
-                <!-- Notification Item 1 -->
-                <div class="notification-item">
-                    <span class="timestamp">12:30 PM</span>
-                    <p>Your service request has been approved.</p>
-                </div>
-    
-                <!-- Notification Item 2 (Add more as needed) -->
-                <div class="notification-item">
-                    <span class="timestamp">10:45 AM</span>
-                    <p>New message received from Admin.</p>
-                </div>
-    
-                <!-- Add more notification items as needed -->
-            </div>
-            <button class="clear-notifications">Clear All Notifications</button>
-        </section>
-    </div>
-    <!-- notification centre ends here -->
-    
-
-    <div class="container">
-        <section class="service-details-grid" style="display: none;">
-            <!-- Service Item 1 -->
-            <div class="service-details">
-                <h1>Service Details</h1>
-                <div class="service-info">
-                    <h2>Calibration Service</h2>
-                    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Cost: $50</p>
-                </div>
-                <button class="request-service-btn">Request Service</button>
-            </div>
-    
-            <!-- Service Item 2 (Add more as needed) -->
-            <div class="service-details">
-                <h1>Service Details</h1>
-                <div class="service-info">
-                    <h2>Maintenance Service</h2>
-                    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Cost: $75</p>
-                </div>
-                <button class="request-service-btn">Request Service</button>
-            </div>
-    
-            <!-- Add more service items as needed -->
-        </section>
-    </div>
-    <!-- service details ends here -->
-    
-    <div class="container">
-        <section class="equipment-listings-marketplace-grid">
-            <!-- Equipment Listing 1 -->
-            <article class="equipment-listing">
-                <h1>Equipment Listings Marketplace</h1>
-                <h2>Microscope</h2>
-                <p>Description: High-quality laboratory microscope with LED illumination.</p>
-                <p>Condition: Like new</p>
-                <p>Price: $500</p>
-                <p>Seller: John Doe</p>
-                <button class="inquire-btn">Inquire</button>
-            </article>
-    
-            <!-- Equipment Listing 2 (Add more as needed) -->
-            <article class="equipment-listing">
-                <h2>Centrifuge</h2>
-                <p>Description: Benchtop centrifuge for laboratory applications.</p>
-                <p>Condition: Excellent</p>
-                <p>Price: $700</p>
-                <p>Seller: Jane Smith</p>
-                <button class="inquire-btn">Inquire</button>
-            </article>
-
-            <!-- Equipment Listing 2 (Add more as needed) -->
-            <article class="equipment-listing">
-                <h2>Centrifuge</h2>
-                <p>Description: Benchtop centrifuge for laboratory applications.</p>
-                <p>Condition: Excellent</p>
-                <p>Price: $700</p>
-                <p>Seller: Jane Smith</p>
-                <button class="inquire-btn">Inquire</button>
-            </article>
-    
-            <!-- Add more equipment listings as needed -->
-        </section>
-    </div>
-    <!-- equipment listing marketplace ends here -->
-    
-    
-    <div class="container" style="display: none;">
-        <section class="equipment-details">
-            <!-- Equipment Details -->
-            <article class="equipment-details-item">
-                <h1>Equipment Details</h1>
-                <h2>Microscope</h2>
-                <img src="images/pic-3.png" alt="Microscope Image" class="equipment-image">
-                <p>Description: High-quality laboratory microscope with LED illumination.</p>
-                <p>Condition: Like new</p>
-                <p>Price: $500</p>
-                <p>Seller: John Doe</p>
-                <button class="contact-btn">Contact Seller</button>
-            </article>
-            <!-- Additional details about the equipment go here -->
-        </section>
-    </div>
-    <!-- equipment details ends here -->
-    
-    <div class="container">
-        <section class="messaging-interface">
-            <!-- Inbox -->
-            <div class="inbox">
-                <!-- Message 1 -->
-                <div class="message">
-                    <div class="message-header">
-                        <span class="sender">John Doe</span>
-                        <span class="timestamp">2 hours ago</span>
-                    </div>
-                    <p>Hey, do you have the specifications for the microscope?</p>
-                    <button class="reply-btn" onclick="toggleCompose()">Reply</button>
-                </div>
-                <!-- Additional messages go here -->
-            </div>
-    
-            <!-- Compose Message -->
-            <div class="compose" id="compose-section" style="display: none;">
-                <h2>Compose Message</h2>
-                <label for="recipient">To:</label>
-                <input type="text" id="recipient" name="recipient" required>
-    
-                <label for="message-content">Message:</label>
-                <textarea id="message-content" name="message-content" rows="4" required></textarea>
-    
-                <button class="send-btn">Send</button>
-            </div>
-        </section>
-    </div>
-    <!-- Messaging interface ends here -->
-    
-    
-    
-
-    <!-- suggestion section starts here -->
-    <div class="container" style="display: none;">
-        <section class="suggestions">
-            <h1>Suggestions</h1>
-            <form id="suggestionForm">
-                <label for="suggestionContent">Your Suggestion:</label>
-                <textarea id="suggestionContent" name="suggestionContent" rows="6" required></textarea>
-
-                <button type="submit">Submit Suggestion</button>
-            </form>
-        </section>
-    </div>
-    <!-- suggestion section ends here -->
-
-    <footer>
+            </section>
+        </div>
+        <!-- service details ends here -->
         
-            <!-- Contact Column -->
-            <div class="col">
-                
-                <h4>Contact</h4>
-                <p><strong>Address:</strong> P.O Box 50205-33, Bungoma, Webuye</p>
-                <p><strong>Phone:</strong> +254736227248 / +254725633487</p>
-                <p><strong>Hours:</strong> 8:00am - 5:00pm, Mon - Sat</p>
-                <div class="follow">
-                    <h4>Follow us</h4>
-                    <div class="icon">
-                        <i class="fab fa-facebook"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-youtube"></i>
+        <div class="container">
+            <section class="equipment-listings-marketplace-grid">
+                <!-- Equipment Listing 1 -->
+                <article class="equipment-listing">
+                    <h1>Equipment Listings Marketplace</h1>
+                    <h2>Microscope</h2>
+                    <p>Description: High-quality laboratory microscope with LED illumination.</p>
+                    <p>Condition: Like new</p>
+                    <p>Price: $500</p>
+                    <p>Seller: John Doe</p>
+                    <button class="inquire-btn">Inquire</button>
+                </article>
+        
+                <!-- Equipment Listing 2 (Add more as needed) -->
+                <article class="equipment-listing">
+                    <h2>Centrifuge</h2>
+                    <p>Description: Benchtop centrifuge for laboratory applications.</p>
+                    <p>Condition: Excellent</p>
+                    <p>Price: $700</p>
+                    <p>Seller: Jane Smith</p>
+                    <button class="inquire-btn">Inquire</button>
+                </article>
+
+                <!-- Equipment Listing 2 (Add more as needed) -->
+                <article class="equipment-listing">
+                    <h2>Centrifuge</h2>
+                    <p>Description: Benchtop centrifuge for laboratory applications.</p>
+                    <p>Condition: Excellent</p>
+                    <p>Price: $700</p>
+                    <p>Seller: Jane Smith</p>
+                    <button class="inquire-btn">Inquire</button>
+                </article>
+        
+                <!-- Add more equipment listings as needed -->
+            </section>
+        </div>
+        <!-- equipment listing marketplace ends here -->
+        
+        
+        <div class="container" style="display: none;">
+            <section class="equipment-details">
+                <!-- Equipment Details -->
+                <article class="equipment-details-item">
+                    <h1>Equipment Details</h1>
+                    <h2>Microscope</h2>
+                    <img src="images/pic-3.png" alt="Microscope Image" class="equipment-image">
+                    <p>Description: High-quality laboratory microscope with LED illumination.</p>
+                    <p>Condition: Like new</p>
+                    <p>Price: $500</p>
+                    <p>Seller: John Doe</p>
+                    <button class="contact-btn">Contact Seller</button>
+                </article>
+                <!-- Additional details about the equipment go here -->
+            </section>
+        </div>
+        <!-- equipment details ends here -->
+        
+        <div class="container">
+            <section class="messaging-interface">
+                <!-- Inbox -->
+                <div class="inbox">
+                    <!-- Message 1 -->
+                    <div class="message">
+                        <div class="message-header">
+                            <span class="sender">John Doe</span>
+                            <span class="timestamp">2 hours ago</span>
+                        </div>
+                        <p>Hey, do you have the specifications for the microscope?</p>
+                        <button class="reply-btn" onclick="toggleCompose()">Reply</button>
+                    </div>
+                    <!-- Additional messages go here -->
+                </div>
+        
+                <!-- Compose Message -->
+                <div class="compose" id="compose-section" style="display: none;">
+                    <h2>Compose Message</h2>
+                    <label for="recipient">To:</label>
+                    <input type="text" id="recipient" name="recipient" required>
+        
+                    <label for="message-content">Message:</label>
+                    <textarea id="message-content" name="message-content" rows="4" required></textarea>
+        
+                    <button class="send-btn">Send</button>
+                </div>
+            </section>
+        </div>
+        <!-- Messaging interface ends here -->
+        
+        
+        
+
+        <!-- suggestion section starts here -->
+        <div class="container" style="display: none;">
+            <section class="suggestions">
+                <h1>Suggestions</h1>
+                <form id="suggestionForm">
+                    <label for="suggestionContent">Your Suggestion:</label>
+                    <textarea id="suggestionContent" name="suggestionContent" rows="6" required></textarea>
+
+                    <button type="submit">Submit Suggestion</button>
+                </form>
+            </section>
+        </div>
+        <!-- suggestion section ends here -->
+
+        <footer>
+            
+                <!-- Contact Column -->
+                <div class="col">
+                    
+                    <h4>Contact</h4>
+                    <p><strong>Address:</strong> P.O Box 50205-33, Bungoma, Webuye</p>
+                    <p><strong>Phone:</strong> +254736227248 / +254725633487</p>
+                    <p><strong>Hours:</strong> 8:00am - 5:00pm, Mon - Sat</p>
+                    <div class="follow">
+                        <h4>Follow us</h4>
+                        <div class="icon">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-youtube"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-    
-            <!-- About Column -->
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms & Conditions</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
-    
-            <!-- Copyright Column -->
-            <div class="copyright">
-                <p>@danwabwile dev.</p>
-            </div>
         
-    </footer>
-    
-    <!-- custom js file link  -->
-</body>
+                <!-- About Column -->
+                <div class="col">
+                    <h4>About</h4>
+                    <a href="about.html">About us</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+        
+                <!-- Copyright Column -->
+                <div class="copyright">
+                    <p>@danwabwile dev.</p>
+                </div>
+            
+        </footer>
+        
+        <!-- custom js file link  -->
+        <script src="../scripts/script.js"></script>
+    </body>
 </html>

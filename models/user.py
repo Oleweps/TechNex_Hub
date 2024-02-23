@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """This module creates the User class"""
 
+import models
 from models.base_model import BaseModel, Base
-from models import storage
 from os import getenv
 from models.message import Message
 from models.feedback import Feedback
@@ -53,7 +53,7 @@ class User(BaseModel, Base):
     - authentication_tokens (relationship): One-to-many relationship with AuthenticationToken
     """
 
-    if storage.storage_t == 'db':
+    if models.storage_t == 'db':
         __tablename__ = 'users'
 
         id = Column(Integer, primary_key=True, autoincrement=True)  # Primary key column
