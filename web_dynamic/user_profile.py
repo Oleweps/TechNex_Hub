@@ -4,11 +4,10 @@ Contains the admin dashboard routes
 """
 import uuid
 from flask import Flask, render_template, request, redirect, url_for
-from models.storage import Storage
+from models import storage
 from models.user import User  # Import User model, adjust as needed
 
 app = Flask(__name__)
-storage = Storage()
 
 @app.route('/user-profile', methods=['GET', 'POST'])
 def user_profile():

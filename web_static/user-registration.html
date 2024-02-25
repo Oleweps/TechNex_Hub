@@ -1,91 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Register</title>
-    <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    
-    <link rel="stylesheet" type="text/css" href="styles/custom.css" />
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+           <title>DLA Instrumentation Hub</title>
+               
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+           
+           <!-- Custom CSS -->
+           <link rel="stylesheet" type="text/css" href="../styles/custom.css">
+                   
+   </head>
+   <body>
+        
+         <!-- header section starts  -->
+     <header class="header">
 
-    <link rel='shortcut icon' href="images/icon.png" />
-</head>
-<body>
-    
-    <!-- header section starts  -->
-<header class="header">
-
-<!-- First Navigation Section -->
-<nav class="navbar nav-1">
-   <section class="flex">
-      <a href="home.html" class="logo"><i class="fas fa-house"></i>TEK HUB</a>
-
-      <!-- Search and Services Selection Section -->
-      <ul>
-      <div class="search-container">
-         <input type="text" placeholder="Search an equipment" id="equipmentSearch">
-         <button type="button">Search</button>
-         <button type="button">Apply Services</button>
-      </div>
-      </ul> 
-   </section>
-</nav>
-
-<!-- Second Navigation Section -->
-<nav class="navbar nav-2">
-   <section class="flex">
-      <div id="menu-btn" class="fas fa-bars"></div>
-
-      <!-- Dropdown Menu -->
-      <div class="menu">
-         <ul>
-            <li><a href="#">User<i class="fas fa-angle-down"></i></a>
-               <ul class="dropdown-content">
-                  
-                  <li><a href="user-profile.html">User Profile</a></li>
-                  <li><a href="logout.html" id="logoutButton">Logout</a></li>
-               </ul>
-            </li>
-            <li><a href="#">Services<i class="fas fa-angle-down"></i></a>
-               <ul class="dropdown-content">
-                  <li><a href="service-request-form.html">Service Request</a></li>
-                  <li><a href="service-request-details.html">Request Details</a></li>
-                  <li><a href="services-marketplace.html">Marketplace</a></li>
-                  <li><a href="service-details.html">Service Details</a></li>
-               </ul>
-            </li>
-            <li><a href="#">Equipment<i class="fas fa-angle-down"></i></a>
-               <ul class="dropdown-content">
-                  <li><a href="equipment-listings-marketplace.html">Equipment Listings</a></li>
-                  <li><a href="equipment-details.html">Equipment Details</a></li>
-               </ul>
-            </li>
-            <li><a href="#">More<i class="fas fa-angle-down"></i></a>
-               <ul class="dropdown-content">
-                  <li><a href="messaging-interface.html">Messages</a></li>
-                  <li><a href="notifications-center.html">Notifications</a></li>
-                  <li><a href="suggestions.html">Suggestions</a></li>
-                  <li><a href="feedback-form.html">Feedback</a></li>
-               </ul>
-            </li>
-         </ul>
-      </div>
-
-      <!-- Additional Navigation Items -->
-      <ul>
-         <li><a href="#">saved <i class="far fa-heart"></i></a></li>
-         <li><a href="#">account <i class="fas fa-angle-down"></i></a>
-            <ul class="dropdown-content">
-               <li><a href="login.html">login</a></li>
-               <li><a href="user-registration.html">register</a></li>
-            </ul>
-         </li>
-      </ul>
-   </section>
-</nav>
-
-</header>
-<!-- header section ends -->
+         <!-- First Navigation Section -->
+         <nav class="navbar nav-1">
+         <section class="flex">
+             <a href="home.html" class="logo"><i class="fas fa-cogs"></i>TEK HUB</a>
+     
+             <!-- Search and Services Selection Section -->
+             <ul>
+             <div class="search-container">
+                 <input type="text" placeholder="Search an equipment" id="equipmentSearch">
+                 <button type="button">Search</button>
+                 
+             </div>
+             </ul> 
+         </section>
+         </nav>
+     
+         <!-- Second Navigation Section -->
+         <nav class="navbar nav-2">
+         <section class="flex">
+             <div id="menu-btn" class="fas fa-bars"></div>
+     
+             <!-- Dropdown Menu -->
+             <div class="menu">
+                 <ul>
+                     <li><a href="#">User<i class="fas fa-angle-down"></i></a>
+                     <ul class="dropdown-content">
+                         
+                         <li><a href="user-profile.html">User Profile</a></li>
+                         <li><a href="logout.html" id="logoutButton">Logout</a></li>
+                     </ul>
+                     </li>
+                     <li><a href="#">Services<i class="fas fa-angle-down"></i></a>
+                     <ul class="dropdown-content">
+                         <li><a href="service-request-form.html">Service Request</a></li>
+                         <li><a href="service-request-details.html">Request Details</a></li>
+                         <li><a href="services-marketplace.html">Marketplace</a></li>
+                         <li><a href="service-details.html">Service Details</a></li>
+                     </ul>
+                     </li>
+                     <li><a href="#">Equipment<i class="fas fa-angle-down"></i></a>
+                     <ul class="dropdown-content">
+                         <li><a href="equipment-listings-marketplace.html">Equipment Listings</a></li>
+                         <li><a href="equipment-details.html">Equipment Details</a></li>
+                     </ul>
+                     </li>
+                     <li><a href="#">More<i class="fas fa-angle-down"></i></a>
+                     <ul class="dropdown-content">
+                         <li><a href="messaging-interface.html">Messages</a></li>
+                         <li><a href="notifications-center.html">Notifications</a></li>
+                         <li><a href="suggestions.html">Suggestions</a></li>
+                         <li><a href="feedback-form.html">Feedback</a></li>
+                     </ul>
+                     </li>
+                 </ul>
+             </div>
+     
+             <!-- Additional Navigation Items -->
+             <ul>
+                 <li><a href="#">saved <i class="far fa-heart"></i></a></li>
+                 <li><a href="#">account <i class="fas fa-angle-down"></i></a>
+                     <ul class="dropdown-content">
+                     <li><a href="login.html">login</a></li>
+                     <li><a href="user-registration.html">register</a></li>
+                     </ul>
+                 </li>
+             </ul>
+         </section>
+         </nav>
+     
+     </header>
+     <!-- header section ends -->
 
 <div class="container">
     <section class="home">
@@ -120,11 +122,42 @@
     <!-- registration section ends -->
 
     <footer>
-        <p>DLA INSTRUMENTATION HUB@CDANWABWILE</p>
-    </footer>
+         
+      <!-- Contact Column -->
+      <div class="col">
+         
+         <h4>Contact</h4>
+         <p><strong>Address:</strong> P.O Box 50205-33, Bungoma, Webuye</p>
+         <p><strong>Phone:</strong> +254736227248 / +254725633487</p>
+         <p><strong>Hours:</strong> 8:00am - 5:00pm, Mon - Sat</p>
+         <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icon">
+                  <i class="fab fa-facebook"></i>
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-instagram"></i>
+                  <i class="fab fa-youtube"></i>
+            </div>
+         </div>
+      </div>
 
-    <!-- custom js file link  -->
-<script src="./script.js"></script>
+      <!-- About Column -->
+      <div class="col">
+         <h4>About</h4>
+         <a href="#">About us</a>
+         <a href="#">Privacy Policy</a>
+         <a href="#">Terms & Conditions</a>
+         <a href="#">Contact Us</a>
+      </div>
+
+      <!-- Copyright Column -->
+      <div class="copyright">
+         <p>@danwabwile dev.</p>
+      </div>
+
+</footer>
+<!-- custom js file link  -->
+<script src="../scripts/script.js"></script>
 </body>
 </html>
 

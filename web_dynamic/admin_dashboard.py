@@ -3,14 +3,13 @@
 Contains the admin dashboard routes
 """
 from flask import Flask, render_template, jsonify
-from models.storage import Storage
+from models import storage
 from models.user import User
 from models.service_request import ServiceRequest
 from models.equipment_listing import EquipmentListing
 import uuid
 
 app = Flask(__name__)
-storage = Storage()
 
 # Add more routes as needed
 

@@ -3,13 +3,12 @@
 Contains the admin dashboard routes
 """
 from flask import Flask, render_template, jsonify, request, session
-from models.auth_token import AuthenticationToken
-from models.storage import Storage
+from models.authentication_token import AuthenticationToken
+from models import storage
 from models.user import LogoutForm
 
 app = Flask(__name__)
 app.secret_key = 'e240d6581e46733f46bc422ae81d9776'  # Replace with a secure secret key
-storage = Storage()
 
 # You can generate the cache_id wherever it is convenient for you
 # For example, you can generate it at the beginning of the script

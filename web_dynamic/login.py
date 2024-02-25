@@ -5,12 +5,11 @@ Contains the admin dashboard routes
 from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
 from models.user import User, UserForm
 from models.authentication_token import AuthenticationToken
-from models.storage import Storage
+from models import storage
 from datetime import datetime, timedelta
 import uuid
 
 app = Flask(__name__)
-storage = Storage()
 app.secret_key = 'e240d6581e46733f46bc422ae81d9776'
 
 # You can generate the cache_id wherever it is convenient for you

@@ -4,11 +4,10 @@ Contains the admin dashboard routes
 """
 import uuid
 from flask import Flask, render_template, request, redirect, url_for
-from models.storage import Storage
+from models import storage
 from models.notification import Notification
 
 app = Flask(__name__)
-storage = Storage()
 
 @app.route('/notifications-center', methods=['GET', 'POST'])
 def notifications_center():

@@ -5,11 +5,10 @@ Contains the admin dashboard routes
 import uuid
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from models.suggestion import Suggestion, User, SuggestionForm
-from models.storage import Storage
+from models import storage
 from datetime import datetime
 
 app = Flask(__name__)
-storage = Storage()
 
 @app.route('/suggestions', methods=['GET', 'POST'])
 def suggestions():

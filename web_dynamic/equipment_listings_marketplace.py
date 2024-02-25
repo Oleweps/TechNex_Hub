@@ -3,12 +3,11 @@
 Contains the admin dashboard routes
 """
 from flask import Flask, render_template, request, redirect, url_for, jsonify
-from models.equipment_listings_marketplace import EquipmentListing, EquipmentListingForm
-from models.storage import Storage
+from models.equipment_listing import EquipmentListing, EquipmentListingForm
+from models import storage
 import uuid
 
 app = Flask(__name__)
-storage = Storage()
 
 @app.route('/equipment_listings_marketplace', methods=['GET', 'POST'])
 def equipment_listings_marketplace():

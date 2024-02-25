@@ -4,7 +4,7 @@ Contains the admin dashboard routes
 """
 from flask import Flask, render_template, request, redirect, url_for
 from models.equipment_listings_marketplace import EquipmentListing, EquipmentListingForm
-from models.storage import Storage
+from models import storage
 
 app = Flask(__name__)
 storage = Storage()

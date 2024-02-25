@@ -5,11 +5,10 @@ Contains the admin dashboard routes
 import uuid
 from flask import Flask, render_template, request, redirect, url_for
 from models.service_request import ServiceRequest, ServiceRequestForm
-from models.storage import Storage
+from models import storage
 
 app = Flask(__name__)
 app.secret_key = 'e240d6581e46733f46bc422ae81d9776'  # Replace with a secure secret key
-storage = Storage()
 
 # Other routes...
 

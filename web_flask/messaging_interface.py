@@ -4,7 +4,7 @@ Contains the admin dashboard routes
 """
 from flask import Flask, render_template, request, redirect, url_for
 from models.message import Message, MessageForm
-from models.storage import Storage
+from models import storage
 from datetime import datetime
 
 app = Flask(__name__)

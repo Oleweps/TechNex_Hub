@@ -1555,6 +1555,7 @@ ul .search-container button:nth-of-type(2) {
        padding: 1.25rem; /* Adjust padding as needed */
        text-align: center;
    }
+}
 
    /* Add other mobile-specific styles here */
 
@@ -1585,7 +1586,7 @@ ul .search-container button:nth-of-type(2) {
 
        /* Add styles specific to 477px width here */
    }
-}
+
 
 /* Media query for tablet devices (768px to 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {

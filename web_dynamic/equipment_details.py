@@ -3,12 +3,11 @@
 Contains the admin equipment details routes
 """
 from flask import Flask, render_template, request, redirect, url_for, jsonify
-from models.equipment_listings_marketplace import EquipmentListing
-from models.storage import Storage
+from models.equipment_listing import EquipmentListing
+from models import storage
 import uuid
 
 app = Flask(__name__)
-storage = Storage()
 
 @app.route('/equipment_details/<int:equipment_id>', methods=['GET'])
 def equipment_details(equipment_id):

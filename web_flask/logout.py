@@ -4,7 +4,7 @@ Contains the admin dashboard routes
 """
 from flask import Flask, render_template, redirect, url_for, session, request
 from models.auth_token import AuthenticationToken
-from models.storage import Storage
+from models import storage
 from models.user import LogoutForm, User  # Import the LogoutForm class
 
 app = Flask(__name__)

@@ -4,13 +4,12 @@ Contains the feedback routes
 """
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from models.feedback import Feedback, FeedbackForm
-from models.storage import Storage
+from models import storage
 from datetime import datetime
 import uuid
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'e240d6581e46733f46bc422ae81d9776'  # Replace with a secure secret key
-storage = Storage()
 
 @app.route('/feedback-form', methods=['GET', 'POST'])
 def feedback_form():
