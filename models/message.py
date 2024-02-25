@@ -7,8 +7,7 @@ from sqlalchemy import Column, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from flask_wtf import FlaskForm
 from os import getenv
-from wtforms import StringField, TextAreaField, SubmitField
-from wtforms.fields.html5 import DateTimeField
+from wtforms import StringField, TextAreaField, SubmitField, DateTimeField
 from wtforms.validators import DataRequired, Length
 
 

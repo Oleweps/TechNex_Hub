@@ -32,7 +32,7 @@ classes = {
     "Notification": Notification
 }
 
-class Storage:
+class DBstorage:
     """This class manages the MySQL database for DLA Instrumentation Hub"""
     __engine = None
     __session = None
