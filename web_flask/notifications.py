@@ -5,11 +5,11 @@ Contains the admin dashboard routes
 from flask import Flask, render_template, request, redirect, url_for
 from models import storage
 from models.notification import Notification
+from . import bp
 
 app = Flask(__name__)
-storage = Storage()
 
-@app.route('/notifications-center', methods=['GET', 'POST'])
+@bp.route('/notifications-center', methods=['GET', 'POST'])
 def notifications_center():
     if request.method == 'POST':
         # Clear all notifications (you may want to implement more specific logic)

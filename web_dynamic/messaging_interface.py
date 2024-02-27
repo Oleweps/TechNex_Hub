@@ -6,6 +6,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from models.message import Message, MessageForm
 from models import storage
 from datetime import datetime
+from . import bp
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'e240d6581e46733f46bc422ae81d9776'  # Replace with a secure secret key
@@ -14,7 +15,7 @@ app.config['SECRET_KEY'] = 'e240d6581e46733f46bc422ae81d9776'  # Replace with a 
 # For example, you can generate it at the beginning of the script
 cache_id = "your_generated_cache_id"
 
-@app.route('/send-message', methods=['GET', 'POST'])
+@bp.route('/send-message', methods=['GET', 'POST'])
 def send_message():
     form = MessageForm()
 
@@ -44,7 +45,7 @@ def send_message():
     # Pass the cache_id as a context variable
     return render_template('message_form.html', form=form, messages=messages, cache_id=cache_id)
 
-@app.route('/message-success')
+@bp.route('/message-success')
 def message_success():
     return render_template('message_success.html', cache_id=cache_id)
 

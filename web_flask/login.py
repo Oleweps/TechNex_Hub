@@ -8,12 +8,12 @@ from models.authentication_token import AuthenticationToken
 from models import storage
 from datetime import datetime, timedelta
 import uuid
+from . import bp
 
 app = Flask(__name__)
-storage = Storage()
 app.secret_key = 'e240d6581e46733f46bc422ae81d9776'  # Make sure to use quotes around the secret key
 
-@app.route('/login', methods=['GET', 'POST'])
+@bp.route('/login', methods=['GET', 'POST'])
 def login():
     form = UserForm()  # Create an instance of the UserForm
 
@@ -44,7 +44,7 @@ def login():
 
     return render_template('login.html', form=form)
 
-@app.route('/home')
+@bp.route('/home')
 def home():
     # Replace the following with your authorization logic
     if 'user_id' in session and 'token' in session:

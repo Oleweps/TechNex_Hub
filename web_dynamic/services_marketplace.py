@@ -6,10 +6,11 @@ import uuid
 from flask import Flask, render_template, request, jsonify
 from models import storage
 from models.service import Service
+from . import bp
 
 app = Flask(__name__)
 
-@app.route('/services-marketplace')
+@bp.route('/services-marketplace')
 def services_marketplace():
     services = storage.all(Service).values()
 
@@ -18,7 +19,7 @@ def services_marketplace():
 
     return render_template('services_marketplace.html', services=services, cache_id=cache_id)
 
-@app.route('/request-service', methods=['POST'])
+@bp.route('/request-service', methods=['POST'])
 def request_service():
     if request.method == 'POST':
         service_id = request.form.get('service_id')

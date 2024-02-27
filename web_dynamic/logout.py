@@ -6,6 +6,7 @@ from flask import Flask, render_template, jsonify, request, session
 from models.authentication_token import AuthenticationToken
 from models import storage
 from models.user import LogoutForm
+from . import bp
 
 app = Flask(__name__)
 app.secret_key = 'e240d6581e46733f46bc422ae81d9776'  # Replace with a secure secret key
@@ -14,7 +15,7 @@ app.secret_key = 'e240d6581e46733f46bc422ae81d9776'  # Replace with a secure sec
 # For example, you can generate it at the beginning of the script
 cache_id = "your_generated_cache_id"
 
-@app.route('/logout', methods=['GET', 'POST'])
+@bp.route('/logout', methods=['GET', 'POST'])
 def logout():
     form = LogoutForm()
 

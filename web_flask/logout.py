@@ -6,12 +6,12 @@ from flask import Flask, render_template, redirect, url_for, session, request
 from models.auth_token import AuthenticationToken
 from models import storage
 from models.user import LogoutForm, User  # Import the LogoutForm class
+from . import bp
 
 app = Flask(__name__)
 app.secret_key = 'e240d6581e46733f46bc422ae81d9776'  # Replace with a secure secret key
-storage = Storage()
 
-@app.route('/logout', methods=['GET', 'POST'])
+@bp.route('/logout', methods=['GET', 'POST'])
 def logout():
     form = LogoutForm()
 

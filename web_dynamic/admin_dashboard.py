@@ -8,12 +8,13 @@ from models.user import User
 from models.service_request import ServiceRequest
 from models.equipment_listing import EquipmentListing
 import uuid
+from . import bp
 
 app = Flask(__name__)
 
 # Add more routes as needed
 
-@app.route('/admin_dashboard')
+@bp.route('/admin_dashboard')
 def admin_dashboard():
     # Retrieve relevant data from the storage
     users = storage.all(User)  # Adjust based on your data model

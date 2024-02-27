@@ -4,10 +4,11 @@ Contains the admin dashboard routes
 """
 from flask import Flask, render_template, request, redirect, url_for
 from models import storage
+from . import bp
 
 app = Flask(__name__)
 
-@app.route('/user-profile', methods=['GET', 'POST'])
+@bp.route('/user-profile', methods=['GET', 'POST'])
 def user_profile():
     user = storage.get('User', 1)  # Replace 1 with the actual user ID
 

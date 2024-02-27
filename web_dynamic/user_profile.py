@@ -6,10 +6,11 @@ import uuid
 from flask import Flask, render_template, request, redirect, url_for
 from models import storage
 from models.user import User  # Import User model, adjust as needed
+from . import bp
 
 app = Flask(__name__)
 
-@app.route('/user-profile', methods=['GET', 'POST'])
+@bp.route('/user-profile', methods=['GET', 'POST'])
 def user_profile():
     user_id = 1  # Replace with the actual user ID
     user = storage.get(User, user_id)

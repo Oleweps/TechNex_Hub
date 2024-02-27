@@ -6,13 +6,11 @@ from flask import Flask, render_template
 from models import storage
 from models.user import User  # Import User model, adjust as needed
 from models import ServiceRequest, EquipmentListing
-
-
+from . import bp
 
 app = Flask(__name__)
-storage = Storage()
 
-@app.route('/admin_dashboard')
+@bp.route('/admin_dashboard')
 def admin_dashboard():
     # Retrieve relevant data from the storage
     users = storage.all(User)  # Adjust based on your data model

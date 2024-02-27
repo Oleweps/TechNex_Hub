@@ -5,11 +5,11 @@ Contains the admin dashboard routes
 from flask import Flask, render_template, request, redirect, url_for
 from models.equipment_listings_marketplace import EquipmentListing, EquipmentListingForm
 from models import storage
+from . import bp
 
 app = Flask(__name__)
-storage = Storage()
 
-@app.route('/equipment_listings_marketplace', methods=['GET', 'POST'])
+@bp.route('/equipment_listings_marketplace', methods=['GET', 'POST'])
 def equipment_listings_marketplace():
     form = EquipmentListingForm()
 

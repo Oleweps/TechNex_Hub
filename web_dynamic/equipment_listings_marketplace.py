@@ -6,10 +6,11 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 from models.equipment_listing import EquipmentListing, EquipmentListingForm
 from models import storage
 import uuid
+from . import bp
 
 app = Flask(__name__)
 
-@app.route('/equipment_listings_marketplace', methods=['GET', 'POST'])
+@bp.route('/equipment_listings_marketplace', methods=['GET', 'POST'])
 def equipment_listings_marketplace():
     form = EquipmentListingForm()
 
@@ -48,7 +49,7 @@ def equipment_listings_marketplace():
 
     return render_template('equipment_listings_marketplace.html', form=form, equipment_listings=equipment_listings, cache_id=cache_id)
 
-@app.route('/inquire-equipment', methods=['POST'])
+@bp.route('/inquire-equipment', methods=['POST'])
 def inquire_equipment():
     if request.method == 'POST':
         equipment_id = request.form.get('equipment_id')
@@ -67,7 +68,7 @@ def inquire_equipment():
         }
         return jsonify(response_data)
 
-@app.route('/search-equipment', methods=['GET'])
+@bp.route('/search-equipment', methods=['GET'])
 def search_equipment():
     search_query = request.args.get('query', '').strip()
 

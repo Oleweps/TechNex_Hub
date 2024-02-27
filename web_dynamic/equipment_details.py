@@ -6,10 +6,11 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 from models.equipment_listing import EquipmentListing
 from models import storage
 import uuid
+from . import bp
 
 app = Flask(__name__)
 
-@app.route('/equipment_details/<int:equipment_id>', methods=['GET'])
+@bp.route('/equipment_details/<int:equipment_id>', methods=['GET'])
 def equipment_details(equipment_id):
     # Fetch equipment details from the database based on equipment_id
     equipment = storage.get(EquipmentListing, id=equipment_id)
@@ -19,7 +20,7 @@ def equipment_details(equipment_id):
 
     return render_template('equipment_details.html', equipment=equipment, cache_id=cache_id)
 
-@app.route('/contact-seller', methods=['POST'])
+@bp.route('/contact-seller', methods=['POST'])
 def contact_seller():
     if request.method == 'POST':
         equipment_id = request.form.get('equipment_id')

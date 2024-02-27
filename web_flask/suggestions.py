@@ -6,11 +6,11 @@ from flask import Flask, render_template, request, redirect, url_for
 from models.suggestion import Suggestion, User, SuggestionForm
 from models import storage
 from datetime import datetime
+from . import bp
 
 app = Flask(__name__)
-storage = Storage()
 
-@app.route('/suggestions', methods=['GET', 'POST'])
+@bp.route('/suggestions', methods=['GET', 'POST'])
 def suggestions():
     suggestion_form = SuggestionForm()
 

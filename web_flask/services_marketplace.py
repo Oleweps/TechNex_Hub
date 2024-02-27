@@ -5,10 +5,11 @@ Contains the admin dashboard routes
 from flask import Flask, render_template
 from models import storage
 from models.service import Service
+from . import bp
 
 app = Flask(__name__)
 
-@app.route('/services-marketplace')
+@bp.route('/services-marketplace')
 def services_marketplace():
     services = storage.all(Service).values()
     return render_template('services_marketplace.html', services=services)

@@ -7,11 +7,12 @@ from models.feedback import Feedback, FeedbackForm
 from models import storage
 from datetime import datetime
 import uuid
+from . import bp
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'e240d6581e46733f46bc422ae81d9776'  # Replace with a secure secret key
 
-@app.route('/feedback-form', methods=['GET', 'POST'])
+@bp.route('/feedback-form', methods=['GET', 'POST'])
 def feedback_form():
     form = FeedbackForm()
 
@@ -45,7 +46,7 @@ def feedback_form():
     # Render the feedback form with cache_id
     return render_template('feedback_form.html', form=form, cache_id=cache_id)
 
-@app.route('/feedback-success')
+@bp.route('/feedback-success')
 def feedback_success():
     return render_template('feedback_success.html')
 

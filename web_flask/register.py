@@ -5,11 +5,11 @@ Contains the admin dashboard routes
 from flask import Flask, render_template, request, redirect, url_for
 from models.user import User, RegisterForm  # Import the RegisterForm class
 from models import storage
+from . import bp
 
 app = Flask(__name__)
-storage = Storage()
 
-@app.route('/register', methods=['GET', 'POST'])
+@bp.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegisterForm()
 
@@ -34,7 +34,7 @@ def register():
     # Render the registration form
     return render_template('registration_form.html', form=form)
 
-@app.route('/registration-success/<username>')
+@bp.route('/registration-success/<username>')
 def registration_success(username):
     return render_template('registration_success.html', username=username)
 

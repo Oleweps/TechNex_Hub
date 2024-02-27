@@ -5,14 +5,14 @@ Contains the admin dashboard routes
 from flask import Flask, render_template, request, redirect, url_for
 from models.service_request import ServiceRequest, ServiceRequestForm
 from models import storage
+from . import bp
 
 app = Flask(__name__)
 app.secret_key = 'e240d6581e46733f46bc422ae81d9776'  # Replace with a secure secret key
-storage = Storage()
 
 # ... (other routes)
 
-@app.route('/service_request_form', methods=['GET', 'POST'])
+@bp.route('/service_request_form', methods=['GET', 'POST'])
 def service_request_form():
     form = ServiceRequestForm()
 
@@ -34,7 +34,7 @@ def service_request_form():
 
     return render_template('service_request_form.html', form=form)
 
-@app.route('/service_request_success')
+@bp.route('/service_request_success')
 def service_request_success():
     return render_template('service_request_success.html')
 

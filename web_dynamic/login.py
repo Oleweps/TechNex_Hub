@@ -8,6 +8,7 @@ from models.authentication_token import AuthenticationToken
 from models import storage
 from datetime import datetime, timedelta
 import uuid
+from . import bp
 
 app = Flask(__name__)
 app.secret_key = 'e240d6581e46733f46bc422ae81d9776'
@@ -16,7 +17,7 @@ app.secret_key = 'e240d6581e46733f46bc422ae81d9776'
 # For example, you can generate it at the beginning of the script
 cache_id = str(uuid.uuid4())
 
-@app.route('/login', methods=['GET', 'POST'])
+@bp.route('/login', methods=['GET', 'POST'])
 def login():
     form = UserForm()
 
